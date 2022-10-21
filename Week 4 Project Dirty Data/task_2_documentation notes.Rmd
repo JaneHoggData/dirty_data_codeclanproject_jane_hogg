@@ -1,0 +1,8 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Cake Ingredients
+34 rows and 3 columns
+chr code, ingredient and measure
