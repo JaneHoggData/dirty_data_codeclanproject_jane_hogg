@@ -20,3 +20,14 @@ cake_ingredients_1961
 
 select(cake_ingredient_code,measure)
 select_all(cake_ingredient_code)
+
+subject_ingredients <- tibble(cake = c("AM", "BP"))
+
+#Not what I wanted to happen
+
+library(tidyr)
+subject_hr <- tibble( name = c("SUBJ01","SUBJ02","SUBJ03"), 
+                      hr_am = c(68,72,68), 
+                      hr_pm = c(58,89,52))
+
+subject_hr
