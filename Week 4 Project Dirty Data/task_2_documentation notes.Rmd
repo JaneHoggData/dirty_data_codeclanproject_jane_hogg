@@ -8,12 +8,23 @@ downloaded the csv data
 Revised the week 2 section on tidy data as data is not in the right format of long data with all the values attributed the the columns and the variable for the data
 Clean the data
 This data has row names - how do you get rid of them?
+Not really want to get rid of them - we want to be able to convert a row name (the name of the people) to give is a column name.
+So essential to use tibble
+decathlon%>%
+  tibble::rownames_to_column
+This then needed to be assigned to a new variable (which i had not done)
+<-decathlonclean then has to appear infront on the original data set and then appears in the data section.
+  
+  
 This data isn’t tidy.
 You will want better column header names.
+Not sure that i would agree with that - what improvement could be made?
+
 
 
 Analysis Questions
 Who had the longest long jump seen in the data? Clay 7.96 m - but this is from ordering the data once in the data set.  Not by using coding.
+Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - think it worked
 
 What was the average 100m time in each competition?
 
