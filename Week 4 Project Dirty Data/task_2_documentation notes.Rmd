@@ -13,10 +13,14 @@ You will want better column header names.
 
 
 Analysis Questions
-Who had the longest long jump seen in the data?
+Who had the longest long jump seen in the data? Clay 7.96 m - but this is from ordering the data once in the data set.  Not by using coding.
+
 What was the average 100m time in each competition?
-Who had the highest total points across both competitions?
+
+Who had the highest total points across both competitions
+
 What was the shot-put scores for the top three competitors in each competition?
+
 What was the average points for competitors who ran the 400m in less than 50 seconds vs. those than ran 400m in more than 50 seconds?
 
 

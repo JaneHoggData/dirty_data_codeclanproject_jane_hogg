@@ -9,9 +9,24 @@ decathlon %>%
   select(row.names)
 
 decathlon %>%
-  select("100m")
+  select
+
 decathlon%>%
-  filter_if()
+  select("100m")
+
+
+
+tibble::add_column("rownames")
+
+decathlon%>%
+tibble_row
+
+decathlonclean <-decathlon%>%
+  tibble::rownames_to_column("competitorname")
+
+
+decathlonclean%>%
+  select(Long.jump, Rank, Points)
 
 
 

@@ -1771,13 +1771,21 @@ pre code {
 <p>Dirty Data Project Set up the project folders and collaborators
 downloaded the csv data Revised the week 2 section on tidy data as data
 is not in the right format of long data with all the values attributed
-the the columns and the variable for the data Clean the data</p>
-<p>1.1.1 Analysis questions This data has row names - how do you get rid
-of them? This data isn’t tidy. You will want better column header
-names.</p>
+the the columns and the variable for the data Clean the data This data
+has row names - how do you get rid of them? This data isn’t tidy. You
+will want better column header names.</p>
+<p>Analysis Questions Who had the longest long jump seen in the data?
+Clay 7.96 m - but this is from ordering the data once in the data set.
+Not by using coding.</p>
+<p>What was the average 100m time in each competition?</p>
+<p>Who had the highest total points across both competitions</p>
+<p>What was the shot-put scores for the top three competitors in each
+competition?</p>
+<p>What was the average points for competitors who ran the 400m in less
+than 50 seconds vs. those than ran 400m in more than 50 seconds?</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KRGlydHkgRGF0YSBQcm9qZWN0DQpTZXQgdXAgdGhlIHByb2plY3QgZm9sZGVycyBhbmQgY29sbGFib3JhdG9ycw0KZG93bmxvYWRlZCB0aGUgY3N2IGRhdGENClJldmlzZWQgdGhlIHdlZWsgMiBzZWN0aW9uIG9uIHRpZHkgZGF0YSBhcyBkYXRhIGlzIG5vdCBpbiB0aGUgcmlnaHQgZm9ybWF0IG9mIGxvbmcgZGF0YSB3aXRoIGFsbCB0aGUgdmFsdWVzIGF0dHJpYnV0ZWQgdGhlIHRoZSBjb2x1bW5zIGFuZCB0aGUgdmFyaWFibGUgZm9yIHRoZSBkYXRhDQpDbGVhbiB0aGUgZGF0YQ0KDQoNCjEuMS4xIEFuYWx5c2lzIHF1ZXN0aW9ucw0KVGhpcyBkYXRhIGhhcyByb3cgbmFtZXMgLSBob3cgZG8geW91IGdldCByaWQgb2YgdGhlbT8NClRoaXMgZGF0YSBpc27igJl0IHRpZHkuDQpZb3Ugd2lsbCB3YW50IGJldHRlciBjb2x1bW4gaGVhZGVyIG5hbWVzLg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KRGlydHkgRGF0YSBQcm9qZWN0DQpTZXQgdXAgdGhlIHByb2plY3QgZm9sZGVycyBhbmQgY29sbGFib3JhdG9ycw0KZG93bmxvYWRlZCB0aGUgY3N2IGRhdGENClJldmlzZWQgdGhlIHdlZWsgMiBzZWN0aW9uIG9uIHRpZHkgZGF0YSBhcyBkYXRhIGlzIG5vdCBpbiB0aGUgcmlnaHQgZm9ybWF0IG9mIGxvbmcgZGF0YSB3aXRoIGFsbCB0aGUgdmFsdWVzIGF0dHJpYnV0ZWQgdGhlIHRoZSBjb2x1bW5zIGFuZCB0aGUgdmFyaWFibGUgZm9yIHRoZSBkYXRhDQpDbGVhbiB0aGUgZGF0YQ0KVGhpcyBkYXRhIGhhcyByb3cgbmFtZXMgLSBob3cgZG8geW91IGdldCByaWQgb2YgdGhlbT8NClRoaXMgZGF0YSBpc27igJl0IHRpZHkuDQpZb3Ugd2lsbCB3YW50IGJldHRlciBjb2x1bW4gaGVhZGVyIG5hbWVzLg0KDQoNCkFuYWx5c2lzIFF1ZXN0aW9ucw0KV2hvIGhhZCB0aGUgbG9uZ2VzdCBsb25nIGp1bXAgc2VlbiBpbiB0aGUgZGF0YT8gQ2xheSA3Ljk2IG0gLSBidXQgdGhpcyBpcyBmcm9tIG9yZGVyaW5nIHRoZSBkYXRhIG9uY2UgaW4gdGhlIGRhdGEgc2V0LiAgTm90IGJ5IHVzaW5nIGNvZGluZy4NCg0KV2hhdCB3YXMgdGhlIGF2ZXJhZ2UgMTAwbSB0aW1lIGluIGVhY2ggY29tcGV0aXRpb24/DQoNCldobyBoYWQgdGhlIGhpZ2hlc3QgdG90YWwgcG9pbnRzIGFjcm9zcyBib3RoIGNvbXBldGl0aW9ucw0KDQpXaGF0IHdhcyB0aGUgc2hvdC1wdXQgc2NvcmVzIGZvciB0aGUgdG9wIHRocmVlIGNvbXBldGl0b3JzIGluIGVhY2ggY29tcGV0aXRpb24/DQoNCldoYXQgd2FzIHRoZSBhdmVyYWdlIHBvaW50cyBmb3IgY29tcGV0aXRvcnMgd2hvIHJhbiB0aGUgNDAwbSBpbiBsZXNzIHRoYW4gNTAgc2Vjb25kcyB2cy4gdGhvc2UgdGhhbiByYW4gNDAwbSBpbiBtb3JlIHRoYW4gNTAgc2Vjb25kcz8NCg0KDQoNCg0K</div>
 
 
 
