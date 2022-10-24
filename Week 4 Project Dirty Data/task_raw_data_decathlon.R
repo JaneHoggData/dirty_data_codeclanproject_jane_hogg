@@ -25,12 +25,27 @@ decathlonclean <-decathlon%>%
   tibble::rownames_to_column("competitorname")
 
 
-decathlonclean%>%
-  select(Long.jump, Rank, Points)
+decathlongjump <-decathlonclean%>%
+  select("competitorname", "Long.jump")desc(1:41)
 
 
+decathlongjump%>%
+  summarise(mean_Long.jump = mean(Long.jump))
 
 
+decath100m <-decathlonclean%>%
+  select(decath100m)
+ 
+
+
+Competitionrank <- decathlonclean%>%
+  select("competitorname","Competition", "Points")
+  
+
+
+  
+ 
+  
 
 
 
