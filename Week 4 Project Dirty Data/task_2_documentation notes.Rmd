@@ -27,10 +27,19 @@ Who had the longest long jump seen in the data? Clay 7.96 m - but this is from o
 Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - think it worked
 
 What was the average 100m time in each competition?
+Select the competitions and create a mean of the 100m
+Answered this first by creating the mean of the long jump (not the right answer)
+First select the competitions/100m
+
+
 
 Who had the highest total points across both competitions
+Sebrle (Decaster) 8217
+Sebrle (OlympicG) 8893
 
 What was the shot-put scores for the top three competitors in each competition?
+Serbel,Clay and Karpov - but i think there is another stage required to seperate out the competition names and also only get top 3.
+
 
 What was the average points for competitors who ran the 400m in less than 50 seconds vs. those than ran 400m in more than 50 seconds?
 
