@@ -7,8 +7,9 @@ Set up the project folders and collaborators
 downloaded the csv data
 Revised the week 2 section on tidy data as data is not in the right format of long data with all the values attributed the the columns and the variable for the data
 Clean the data
-This data has row names - how do you get rid of them?
-Not really want to get rid of them - we want to be able to convert a row name (the name of the people) to give is a column name.
+
+Q.This data has row names - how do you get rid of them?
+A.Not really want to get rid of them - we want to be able to convert a row name (the name of the people) to give is a column name.
 So essential to use tibble
 decathlon%>%
   tibble::rownames_to_column
@@ -16,32 +17,43 @@ This then needed to be assigned to a new variable (which i had not done)
 <-decathlonclean then has to appear infront on the original data set and then appears in the data section.
   
   
-This data isn’t tidy.
+Q.This data isn’t tidy.
 You will want better column header names.
 Not sure that i would agree with that - what improvement could be made?
 
 
 
+Q.A
 Analysis Questions
 Who had the longest long jump seen in the data? Clay 7.96 m - but this is from ordering the data once in the data set.  Not by using coding.
-Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - think it worked
+A.Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - think it worked
 
-What was the average 100m time in each competition?
+Q.What was the average 100m time in each competition?
 Select the competitions and create a mean of the 100m
-Answered this first by creating the mean of the long jump (not the right answer)
-First select the competitions/100m
+A.Answered this first by creating the mean of the long jump (not the right answer)
+First select the competitions/100m - when 100 is included need to use back ticks top left key
+1 Decastar         11.2
+2 OlympicG         10.9
 
 
 
-Who had the highest total points across both competitions
-Sebrle (Decaster) 8217
-Sebrle (OlympicG) 8893
+Q. Who had the highest total points across both competitions
+A.Sebrle (Decaster) 8217
+A.Sebrle (OlympicG) 8893
 
-What was the shot-put scores for the top three competitors in each competition?
-Serbel,Clay and Karpov - but i think there is another stage required to seperate out the competition names and also only get top 3.
+Q.What was the shot-put scores for the top three competitors in each competition?
+A.Serbel,Clay and Karpov - but i think there is another stage required to seperate out the competition names and also only get top 3.
 
 
-What was the average points for competitors who ran the 400m in less than 50 seconds vs. those than ran 400m in more than 50 seconds?
+Q.What was the average points for competitors who ran the 400m in less than 50 seconds vs. those than ran 400m in more than 50 seconds
+
+Need average/Mean for those who ran 400m in more than 50seconds
+Need average/Mean from those who ran 400m in less than 50 seconds.
+
+A. Firstly broke this down into the mean for the 400m for each competition to practice this again.
+Decaster 49.6
+OlymmpicG 49.6
+
 
 
 
