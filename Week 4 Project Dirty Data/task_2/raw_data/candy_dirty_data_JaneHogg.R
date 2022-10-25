@@ -14,12 +14,13 @@ library(janitor)
 candy_2015 <- clean_names(boing_boing_candy_2015)
 
 (candy_2015 <-candy_2015%>%
-rename (trick_or_treating =
+rename (going_out =
            are_you_going_actually_going_trick_or_treating_yourself))
   
   
 candy_2016 <-clean_names(boing_boing_candy_2016)
 candy_2017 <-clean_names(boing_boing_candy_2017)
+
 
 
 
