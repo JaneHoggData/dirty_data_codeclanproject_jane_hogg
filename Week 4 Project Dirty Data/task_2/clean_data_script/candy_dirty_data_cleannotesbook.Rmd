@@ -12,6 +12,8 @@ Loaded in janitor (forgot to do that in task 1) but cleaned it for task 4 to mak
 Renamed the columns year/timestamp/trick and treat
 Notes for 2016 data clean
 
+Used the function Na to remove the NA data - need to check if done.
+Want to exclude gender and also state as not relevan to the quesetions we we are being asked
 Joining the data - relationship is many to many
 Clear missing values
 ratings for the candy
