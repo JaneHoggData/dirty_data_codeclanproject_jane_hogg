@@ -13,7 +13,10 @@ Renamed the columns year/timestamp/trick and treat
 Notes for 2016 data clean
 
 Used the function Na to remove the NA data - need to check if done.
-Want to exclude gender and also state as not relevan to the quesetions we we are being asked
+Want to exclude gender and also state as not relevant to the questions we we are being asked
+
+
+Made a total mess of the files and deleted 16/17 - so had to reset Github
 Joining the data - relationship is many to many
 Clear missing values
 ratings for the candy
