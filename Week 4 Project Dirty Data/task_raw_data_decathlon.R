@@ -68,23 +68,20 @@ Competitionfour <- decathlonclean%>%
     select("competitorname","400m","Points")
   
   
-  Competitor400 <-decathlonclean%>%
-    select("competitorname","400m","Points")%>%
-    mutate(average_400m_count = if_else(average_400m_count >50))
+  decathlonclean%>%
+    select(`400m`,Points)%>% 
+    mutate(Less_than_50s = if_else (`400m`< 50, TRUE, FALSE))%>%
+    group_by(Less_than_50s)%>%
+    summarise(mean_of_points = mean(Points))
            
   
-  Competitors440 <-decathlonclean%>%
-    select("competitorname","400m")
-    group_by(`400m`)%>%
-    mutate(lessthan_rating) = if_else (less``)
+ 
+           
+  
   
     
   
   
-  books%>%
-    mutate(average_ratings_count = if_else (
-      ratings_count > mean(ratings_count), TRUE, FALSE
-    ), .after = ratings_count)
-
+ 
 
 

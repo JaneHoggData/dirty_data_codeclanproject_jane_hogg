@@ -47,14 +47,25 @@ A.Serbel,Clay and Karpov - but i think there is another stage required to sepera
 
 Q.What was the average points for competitors who ran the 400m in less than 50 seconds vs. those than ran 400m in more than 50 seconds
 
-Need average/Mean for those who ran 400m in more than 50seconds
-Need average/Mean from those who ran 400m in less than 50 seconds.
+Need average/Mean points for those who ran 400m in more than 50seconds
+Need average/Mean points from those who ran 400m in less than 50 seconds.
 
 A. Firstly broke this down into the mean for the 400m for each competition to practice this again.
 Decaster 49.6
 OlymmpicG 49.6
 
+Help section from Colin
+Vector contains 400m times NOT the competitors (not the who)
+Numbers needs back tick but character columns nots.
+Mutate adds a new varaiable or a new value realating for each row.
 
+
+decathlonclean%>%
+    select(`400m`,Points)%>% = tells what columns i want
+    mutate(Less_than_50s = if_else (`400m`< 50, TRUE, FALSE)) # seperate out the sections of the equations (if X=Y then TRUE) - creates a new column
+    
+    group_by(Less_than_50s)%>% - bringing together the two sections of the data lessthan 400m data set or tells us we are interested in 400m times that meet the criteria that we have specified.
+Summarise - brings it all together and the wrap up or interm calculation - use at the end of the code.
 
 
 
