@@ -14,39 +14,17 @@ candy_2015 <- clean_names(boing_boing_candy_2015)
 
 
 
-rename(candy_2015)%>%
-  (year = timestamp)
-
-rename(candy_2015)%>%
-  ( trick_or_treating =
-           are_you_going_actually_going_trick_or_treating_yourself`)
+(candy_2015 <-candy_2015%>%
+rename (trick_or_treating =
+           are_you_going_actually_going_trick_or_treating_yourself))
   
   
 
 
 
-candy_2015 <- candy_2015%>%
-  rename(`year` = `timestamp`)
+
+
          
          
          
          
-         `trick_or_treating" =
-           `are_you_going_actually_going_trick_or_treating_yourself`) 
-
-
-
-candy_2015 <
-  rename()
-
-
-
-
-
-video_games_renamed %>%
-  names()
-
-
-video_games_renamed <- video_games_janitor_clean %>%
-  rename("game_title" = "game_name", "activity" = "what", "playing_hours" = "value")
-

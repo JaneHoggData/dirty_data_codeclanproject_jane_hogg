@@ -1768,31 +1768,33 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-Notebook. When you execute code within the notebook, the results appear
-beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within
-the chunk or by placing your cursor inside it and pressing
-<em>Ctrl+Shift+Enter</em>.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
+<p>Read in the data - revised the read in notes and the important of
+Excel and extra package Review and look at the data deciding what i will
+really need to answer the questions Clean each dataset first - no meta
+data contained in the files (data about data)</p>
+<p>Loaded in janitor (forgot to do that in task 1) but cleaned it for
+task 4 to make sure no capitals and spaces. Renamed the columns Joining
+the data - relationship is many to many Clear missing values ratings for
+the candy Average age ToT and the average of those not - dead to check
+the NA Ranking of joy, meh and despair Data Cleaning</p>
+<p>Analysis 1.4.1 Q1.What is the total number of candy ratings given
+across the three years. (Number of candy ratings, not the number of
+raters. Don’t count missing values)</p>
+<p>Q2 What was the average age of people who are going out trick or
+treating? Q3What was the average age of people who are not going trick
+or treating?</p>
+<p>Q4For each of joy, despair and meh, which candy bar received the most
+of these ratings?</p>
+<p>Q5How many people rated Starburst as despair? For the next three
+questions, count despair as -1, joy as +1, and meh as 0.</p>
+<p>Q6What was the most popular candy bar by this rating system for each
+gender in the dataset ?</p>
+<p>Q7What was the most popular candy bar in each year?</p>
+<p>Q8What was the most popular candy bar by this rating for people in
+US, Canada, UK, and all other countries?</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpSZWFkIGluIHRoZSBkYXRhIC0gcmV2aXNlZCB0aGUgcmVhZCBpbiBub3RlcyBhbmQgdGhlIGltcG9ydGFudCBvZiBFeGNlbCBhbmQgZXh0cmEgcGFja2FnZQ0KUmV2aWV3IGFuZCBsb29rIGF0IHRoZSBkYXRhIGRlY2lkaW5nIHdoYXQgaSB3aWxsIHJlYWxseSBuZWVkIHRvIGFuc3dlciB0aGUgcXVlc3Rpb25zDQpDbGVhbiBlYWNoIGRhdGFzZXQgZmlyc3QgLSBubyBtZXRhIGRhdGEgY29udGFpbmVkIGluIHRoZSBmaWxlcyAoZGF0YSBhYm91dCBkYXRhKQ0KDQpMb2FkZWQgaW4gamFuaXRvciAoZm9yZ290IHRvIGRvIHRoYXQgaW4gdGFzayAxKSBidXQgY2xlYW5lZCBpdCBmb3IgdGFzayA0IHRvIG1ha2Ugc3VyZSBubyBjYXBpdGFscyBhbmQgc3BhY2VzLg0KUmVuYW1lZCB0aGUgY29sdW1ucyANCkpvaW5pbmcgdGhlIGRhdGEgLSByZWxhdGlvbnNoaXAgaXMgbWFueSB0byBtYW55DQpDbGVhciBtaXNzaW5nIHZhbHVlcw0KcmF0aW5ncyBmb3IgdGhlIGNhbmR5DQpBdmVyYWdlIGFnZSBUb1QgYW5kIHRoZSBhdmVyYWdlIG9mIHRob3NlIG5vdCAtIGRlYWQgdG8gY2hlY2sgdGhlIE5BDQpSYW5raW5nIG9mIGpveSwgbWVoIGFuZCBkZXNwYWlyDQpEYXRhIENsZWFuaW5nDQoNCg0KQW5hbHlzaXMNCjEuNC4xDQpRMS5XaGF0IGlzIHRoZSB0b3RhbCBudW1iZXIgb2YgY2FuZHkgcmF0aW5ncyBnaXZlbiBhY3Jvc3MgdGhlIHRocmVlIHllYXJzLg0KKE51bWJlciBvZiBjYW5keSByYXRpbmdzLCBub3QgdGhlIG51bWJlciBvZiByYXRlcnMuIERvbuKAmXQgY291bnQgbWlzc2luZyB2YWx1ZXMpDQoNClEyIFdoYXQgd2FzIHRoZSBhdmVyYWdlIGFnZSBvZiBwZW9wbGUgd2hvIGFyZSBnb2luZyBvdXQgdHJpY2sgb3IgdHJlYXRpbmc/DQpRM1doYXQgd2FzIHRoZSBhdmVyYWdlIGFnZSBvZiBwZW9wbGUgd2hvIGFyZSBub3QgZ29pbmcgdHJpY2sgb3IgdHJlYXRpbmc/DQoNClE0Rm9yIGVhY2ggb2Ygam95LCBkZXNwYWlyIGFuZCBtZWgsIHdoaWNoIGNhbmR5IGJhciByZWNlaXZlZCB0aGUgbW9zdCBvZiB0aGVzZSByYXRpbmdzPw0KDQpRNUhvdyBtYW55IHBlb3BsZSByYXRlZCBTdGFyYnVyc3QgYXMgZGVzcGFpcj8NCkZvciB0aGUgbmV4dCB0aHJlZSBxdWVzdGlvbnMsIGNvdW50IGRlc3BhaXIgYXMgLTEsIGpveSBhcyArMSwgYW5kIG1laCBhcyAwLg0KDQpRNldoYXQgd2FzIHRoZSBtb3N0IHBvcHVsYXIgY2FuZHkgYmFyIGJ5IHRoaXMgcmF0aW5nIHN5c3RlbSBmb3IgZWFjaCBnZW5kZXIgaW4gdGhlIGRhdGFzZXQgPw0KDQpRN1doYXQgd2FzIHRoZSBtb3N0IHBvcHVsYXIgY2FuZHkgYmFyIGluIGVhY2ggeWVhcj8NCg0KUThXaGF0IHdhcyB0aGUgbW9zdCBwb3B1bGFyIGNhbmR5IGJhciBieSB0aGlzIHJhdGluZyBmb3IgcGVvcGxlIGluIFVTLCBDYW5hZGEsIFVLLCBhbmQgYWxsIG90aGVyIGNvdW50cmllcz8=</div>
 
 
 
