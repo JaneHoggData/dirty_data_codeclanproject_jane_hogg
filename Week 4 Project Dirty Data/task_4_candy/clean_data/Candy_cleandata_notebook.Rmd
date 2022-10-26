@@ -22,6 +22,7 @@ Analysis Questions
 
 Decided to complete a bind to create megadate and then answering the questions.
 Need to clean again.
+Cleaned the NA from the age column.
 
 Analysis
 1.4.1
