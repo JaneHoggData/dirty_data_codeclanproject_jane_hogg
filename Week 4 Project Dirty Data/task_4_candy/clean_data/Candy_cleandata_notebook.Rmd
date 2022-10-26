@@ -2,10 +2,26 @@
 title: "R Notebook"
 output: html_notebook
 ---
+ 
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+Revised the joins function to consider what needed to answer key questions
+4 mutating join verbs:
+* inner_join() : returns all rows from two tables with matching records.
+* left_join() : returns all records in left table, and any matching records in another.
+* right_join() : returns all records in right table, and any matching records in another.
+* full_join() : returns all records in both tables, matching where possible.
 
+2 filtering join verbs:
+* semi_join() : returns only rows from the first table where one or more matches are found in the second table.
+* anti_join() : returns only rows from the first table where no matches are found in the second table
+
+2 binding verbs:
+* bind_rows() : add rows to a table
+* bind_cols() : add columns to a table
 Analysis Questions
+
+Decided to complete a bind to create megadate and then answering the questions.
+Need to clean again.
 
 Analysis
 1.4.1
@@ -14,6 +30,9 @@ Q1.What is the total number of candy ratings given across the three years.
 
 Q2 What was the average age of people who are going out trick or treating?
 Q3What was the average age of people who are not going trick or treating?
+
+
+
 
 Q4For each of joy, despair and meh, which candy bar received the most of these ratings?
 
