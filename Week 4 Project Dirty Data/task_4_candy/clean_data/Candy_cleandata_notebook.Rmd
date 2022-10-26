@@ -1,0 +1,27 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Analysis Questions
+
+Analysis
+1.4.1
+Q1.What is the total number of candy ratings given across the three years.
+(Number of candy ratings, not the number of raters. Don’t count missing values)
+
+Q2 What was the average age of people who are going out trick or treating?
+Q3What was the average age of people who are not going trick or treating?
+
+Q4For each of joy, despair and meh, which candy bar received the most of these ratings?
+
+Q5How many people rated Starburst as despair?
+For the next three questions, count despair as -1, joy as +1, and meh as 0.
+
+Q6What was the most popular candy bar by this rating system for each gender in the dataset ?
+
+Q7What was the most popular candy bar in each year?
+
+Q8What was the most popular candy bar by this rating for people in US, Canada, UK, and all other countries?

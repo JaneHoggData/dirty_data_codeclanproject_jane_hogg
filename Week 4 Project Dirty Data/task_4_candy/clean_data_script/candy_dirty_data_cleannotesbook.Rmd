@@ -1,0 +1,49 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+Read the analysis questions first and also the visual plot of the data on the website.  This gave me some idea of the answers to some of the analysis questions before any deep dive. Buy lindt truffles to be top treating house.
+Read in the data - revised the read in notes and the important of Excel and extra package
+Review and look at the data deciding what i will really need to answer the questions
+Clean each dataset first rahter than all together. - no meta data contained in the files (data about data)
+
+
+Loaded in janitor (forgot to do that in task 1) but cleaned it for task 4 to make sure no capitals and spaces.
+Renamed the columns year/timestamp/trick and treat
+Notes for 2016 data clean
+
+
+Decided to not removed NA data as not required in order to answer the question.  But did add in extra columns for gender and NA. 
+Want to exclude gender and also state as not relevant to the questions we we are being asked
+
+
+Made a total mess of the files and deleted 16/17 - so had to reset Github
+Joining the data - relationship is many to many
+New day sorted the going out questions and then did a sketch of what i needed to do with each column to organise.
+Clear missing values
+
+
+ratings for the candy
+Average age ToT and the average of those not - dead to check the NA
+Ranking of joy, meh and despair
+Data Cleaning
+
+
+Analysis
+1.4.1
+Q1.What is the total number of candy ratings given across the three years.
+(Number of candy ratings, not the number of raters. Don’t count missing values)
+
+Q2 What was the average age of people who are going out trick or treating?
+Q3What was the average age of people who are not going trick or treating?
+
+Q4For each of joy, despair and meh, which candy bar received the most of these ratings?
+
+Q5How many people rated Starburst as despair?
+For the next three questions, count despair as -1, joy as +1, and meh as 0.
+
+Q6What was the most popular candy bar by this rating system for each gender in the dataset ?
+
+Q7What was the most popular candy bar in each year?
+
+Q8What was the most popular candy bar by this rating for people in US, Canada, UK, and all other countries?
