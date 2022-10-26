@@ -13,5 +13,14 @@ candy_2017 <-candy_2017%>%
   rename(trick_or_treating = q1_going_out)
 
 
+candy_2017 <-candy_2017%>%
+  rename(timestamp = internal_id)
 
-
+xxx
+candy_2017_date <-candy_2017%>%
+  Mutate(timestamp = as.Date.numeric(01.01.2017: 31.12.2017)
+ 
+  
+  
+  
+ 

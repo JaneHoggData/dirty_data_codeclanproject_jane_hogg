@@ -12,13 +12,17 @@ Loaded in janitor (forgot to do that in task 1) but cleaned it for task 4 to mak
 Renamed the columns year/timestamp/trick and treat
 Notes for 2016 data clean
 
-Used the function Na to remove the NA data - need to check if done.
+
+Decided to not removed NA data as not required in order to answer the question.  But did add in extra columns for gender and NA. 
 Want to exclude gender and also state as not relevant to the questions we we are being asked
 
 
 Made a total mess of the files and deleted 16/17 - so had to reset Github
 Joining the data - relationship is many to many
+New day sorted the going out questions and then did a sketch of what i needed to do with each column to organise.
 Clear missing values
+
+
 ratings for the candy
 Average age ToT and the average of those not - dead to check the NA
 Ranking of joy, meh and despair

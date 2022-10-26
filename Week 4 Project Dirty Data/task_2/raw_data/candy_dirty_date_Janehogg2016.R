@@ -11,7 +11,7 @@ candy_2016 <- clean_names(boing_boing_candy_2016)
 
 
 candy_2016 <-candy_2016%>%
-rename(trick_or_treating =
+rename(q1_going_out =
               are_you_going_actually_going_trick_or_treating_yourself)
 
 
