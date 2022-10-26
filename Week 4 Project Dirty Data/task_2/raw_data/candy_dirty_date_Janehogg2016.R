@@ -16,3 +16,5 @@ rename(q1_going_out =
 
 
 
+
+write_csv(candy_2016, "clean_data.Rproj")

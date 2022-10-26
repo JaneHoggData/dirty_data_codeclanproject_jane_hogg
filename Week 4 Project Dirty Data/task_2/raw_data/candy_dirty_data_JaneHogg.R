@@ -17,14 +17,13 @@ view(candy_2015)
 candy_2015 <-candy_2015%>%
   rename(q1_going_out = are_you_going_actually_going_trick_or_treating_yourself)
   
-view(candy_2015)
+
+candy_2015<-candy_2015%>%
+  add_column(q4_gender = NA, .after = "q1_going_out")
 
 
 
-
-
-
-         
-         
-         
-         
+write_csv(candy_2015, "clean_data.Rproj")
+          
+          
+          
