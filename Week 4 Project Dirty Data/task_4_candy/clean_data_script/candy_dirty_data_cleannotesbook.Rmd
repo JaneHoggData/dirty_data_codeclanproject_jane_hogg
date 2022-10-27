@@ -3,48 +3,49 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-##Task 4 - Candy Halloween Horror Hierachy
+##  Task 4 - Candy Halloween Horror Hierachy
 
-#Background Comments
+#  1 Background Comments
 
-#I decided to read the analysis questions first before even looking at the data. I also reviewed the visual plot of the data on the website so I could get a real sense of how others had used the data to provide helpful insights and a hierachy of candy based on the data.  Put simply what people liked, sort of liked and then disliked if there were Trick or Treater particpants or not.
+#  I decided to read the analysis questions first before even looking at the data. reviewed the visual plot of the data on the website so I could get a real sense of how others had used the data to provide helpful insights and the hierachy of candy poularity.  Put simply what people liked, sort of liked and then disliked if there were Trick or Treater particpants or not.
 
-#The data consisted of three data sets from 2015 - 2017 with a considerable amount of challenges with most of the datasets in relation to the standarisation of the questions and also the relevance to the questions being needed to be asked. The data also provided insights in relatin to age,gender and the location of respondents.
+#  The data consisted of three data sets from 2015 - 2017 with a considerable amount of challenges with most of the datasets.  There were some challenges with the standarisation of the questions and also the relevance to the information being asked.The data also provided insights in relatin to age,gender and the location of respondents.
 
-#It should be noted that in my opinion the 2017 dataset was so full of unrelated questions and no timestamp data that was comparable to the other data sets (so was it really 2017 data?)  I would be inclined, if the analysis was to be completed in a short timeframe, to omit it from the analysis in Q2.  
+#  It should be noted that in my opinion the 2017 dataset was full of unrelated questions and no timestamp data that was comparable to the other data sets (so was it really 2017 data?)  I would be inclined, if the analysis was to be completed in a very short timeframe, to omit it from the analysis in Q2.  
 
-#In addition the datasets of 2015-2016 provides a sample size in excess of 10,000 records. This is a significant number to consider the information statistically robust.
+#  In addition the datasets of 2015-2016 provides a sample size in excess of 10,000 records. This is a significant number to consider the information statistically robust.
 
-#The inclusion of irrelavant questions in 2017 also illustrated the need to be prudent when asking questions. In relation to the age question more directive in the use of a drop down menu for age classification.
-
-
-This gave me some idea of the answers to some of the analysis questions before any deep dive. 
---Buy Kit Kats, normal sized bars of chocolate and lindt truffles to be the top treating house in the neighbourhood.--
-
-##Reading in the Data
-
-#Read in the data - revised the read in notes and the importantance of Excel and extra packages to download,
-#Review and look at the data deciding what i will really need to answer the questions
-
-###Cleaning the Data
-
-#Cleaned each dataset first rather than all together. - no meta data contained in the files (data about data)
+# The inclusion of irrelavant questions in 2017 also illustrated the need to be prudent when asking questions. In relation to the age question more the use of a drop down menu for age classification would have been helpful.
 
 
-#Loaded in janitor (forgot to do that in task 1) but cleaned it for task 4 to make sure no capitals and spaces.
-#Renamed the columns year/timestamp/trick and treat
+#  Overall the pictorial summary gave me some idea of the answers to some of the analysis questions before any deep dive. 
 
-#Here I had to order my thoughts with pen and paper (see photo) which did help try to order the thoughs and get back on track with focus on the questions only.
+--Buy Kit Kats,  normal sized bars of chocolate and lindt truffles to be the top treating house in the neighbourhood.--
+
+##  2 Reading in the Data
+
+#  Read in the data - revised the read in notes and the importantance of Excel and extra packages to download,
+#  Reviewed and looked at the data deciding what i will really need to answer the questions
+
+##  3 Cleaning the Data
+
+# Cleaned each dataset first rather than all together. - no meta data contained in the files (data about data)
 
 
-#Decided at this stage to not removed NA data on all the files as not required in order to answer the question.  But did add in extra columns for gender and NA. 
+#  Loaded in janitor (forgot to do that in task 1) but cleaned it for task 4 to make sure no capitals and spaces.
+#  Renamed the columns year/timestamp/trick and treat
 
-#Exclude gender and also state (2016) as not relevant to the questions we  are being asked.  I 
+#  Here I had to order my thoughts with pen and paper (see photo) which did help to order my aproach and to focus on the data needed to answer the questions only.
 
 
-#Made a total mess of the files and deleted 16/17 - so had to reset Github
+#  Decided at this stage to not removed NA data on all the files as not required in order to answer the question.  But did add in extra columns for gender and NA. 
 
-#New day sorted the going out questions and then did a sketch of what i needed to do with each column to organise.
-#Clear missing values.  
+#  Exclude gender and also state (2016) as not relevant to the questions we  are being asked.  I 
 
-#Concluded that i needed to move on to consider how to then join the data.  And revised the sections on joins, although decided that bidding was more relevant and helpfyl. 
+
+#  WEdnesday - Made a total mess of the files and deleted 16/17 - so had to reset Github
+
+# New day sorted the "going out" questions and then did a sketch of what i needed to do with each column to organise.
+#  Cleared missing values.  
+
+#Concluded that i needed to move on to consider how to then join the data.  And revised the sections on joins, although decided that binding columns was more relevant and helpul. 
