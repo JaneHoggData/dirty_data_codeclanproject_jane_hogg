@@ -1,5 +1,6 @@
 library(tidyverse)
 library(readr)
+read_csv("C:/Users/44792/OneDrive/Desktop/Codeclan 2022/dirty_data_codeclanproject_jane_hogg/Week 4 Project Dirty Data/task_1/raw_data/decathlon.rds")
 decathlon
 view(decathlon)
 glimpse(decathlon)
@@ -80,7 +81,7 @@ Competitionfour <- decathlonclean%>%
   
   
     
-  
+
   
  
 

@@ -2,59 +2,61 @@
 title: "R Notebook"
 output: html_notebook
 ---
-## Dirty Data Project - Task 1 - Decathlon
+### Dirty Data Project - Task 1 - Decathlon
 
 # MVP
 
-## Set up the project folders and collaborators included in the documentation
-## Downloaded the csv datafiles and input the data into the folder.
-## Took time to review the data and consider what the content of the data looked like and if there were errors or anomalise in the data.
-## Revised the week 2 section on tidy data as the data is not in the right format of long data with all the values attributed the the columns and the variable for the data.
-##Read the questions as this is the essence of what i need to achieve and to focus my time on this.  As opposed to lots of code and wrangling that does not really answer the questions.
+# Set up the project folders and collaborators included in the documentation
+# Downloaded the csv datafiles and input the data into the folder.
+# Took time to review the data and consider what the content of the data looked like and if there were errors or anomalise in the data.
+# Revised the week 2 section on tidy data as the data is not in the right format of long data with all the values attributed the the columns and the variable for the data.
+#Read the questions as this is the essence of what i need to achieve and to focus my time on this.  As opposed to lots of code and wrangling that does not really answer the questions.
 
-## Cleaning  the data - a process of reflection.
+### Cleaning  the data - a process of reflection.
 
 
 # Q1.This data has row names - how do you get rid of them?
 
 # A1.I did not really want to get rid of them - we want to be able to convert a row name (the name of the person) and give this a clear column name so that we are able to still attribute a score to a named individual.
 
-## So essential to use tibble
+# So essential to use tibble
 
-##tibble::add_column("rownames")
+#tibble::add_column("rownames")
 
-##decathlon%>%
-##tibble_row
+#decathlon%>%
+#tibble_row
 
-##decathlonclean <-decathlon%>%
+#decathlonclean <-decathlon%>%
   tibble::rownames_to_column("competitorname")
   decathlon%>%
   tibble::rownames_to_column
   
   
-##This then needed to be assigned to a new variable (which i had not done)
-##<-decathlonclean It has to appear in front on the original data set and then appears in the data section.  Clearly there was a need for me to return to the class notes again and revise the assignment of a variable.
+#This then needed to be assigned to a new variable (which i had not done)
+#<-decathlonclean It has to appear in front on the original data set and then appears in the data section.  Clearly there was a need for me to return to the class notes again and revise the assignment of a variable.
   
   
-##Q2.This data isn’t tidy.
-##You will want better column header names.
-##A2 - Not sure that i would agree with that - what improvement could be made? I think from the clean i was able to answer the questions.  But i know that this  could probably be challenged as the purpose of the task and my opinion could be challenged.
+#Q2.This data isn’t tidy.
+
+#You will want better column header names.
+
+#A2 - Not sure that i would agree with that - what improvement could be made? I think from the clean i was able to answer the questions.  But i know that this  could probably be challenged as the purpose of the task and my opinion could be challenged.
 
 
 ###Anaysis 
 
 
-##  Q.A
-## Who had the longest long jump seen in the data?
+##Q.A
+# Who had the longest long jump seen in the data?
 
-## A - Clay had the longer long jump with a measurement of 7.96 m - but this ##was from ordering the data once in the data set.  Not by improving on the ##code or using coding. So time to revise the notes again and have a second ##attempt.
+# A - Clay had the longer long jump with a measurement of 7.96 m - but this #was from ordering the data once in the data set.  Not by improving on the #code or using coding. So time to revise the notes again and have a second #attempt.
 
-##Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - think it worked
+#Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - think it worked
 
 
-##QB.What was the average 100m time in each competition?
+#QB.What was the average 100m time in each competition?
 
-## Here I Selected the competitions and created a mean of the 100m
+# Here I Selected the competitions and created a mean of the 100m
 
 ##decathlongjump%>%
   ##summarise(mean_Long.jump = mean(Long.jump))
@@ -66,42 +68,56 @@ output: html_notebook
 2 OlympicG         10.9
 
 
-##QC. Who had the highest total points across both competitions?
+#QC. Who had the highest total points across both competitions?
 
 
 A.Sebrle (Decaster) 8217
 A.Sebrle (OlympicG) 8893
 
-##Q.D What was the shot-put scores for the top three competitors in each ##competition?
+#Q.D What was the shot-put scores for the top three competitors in each #competition?
 
 A.Serbel,Clay and Karpov - but i think there is another stage required to separate out the competition names and also only get top 3.  So i would need to have completed another section here to get to the final and full responce to the question.
 
-
-##Q.E What was the average points for competitors who ran the 400m in less ##than 50 seconds vs. those than ran 400m in more than 50 seconds
-
-Need average/Mean points for those who ran 400m in more than 50seconds
-Need average/Mean points from those who ran 400m in less than 50 seconds.
-
-A. Firstly broke this down into the mean for the 400m for each competition to practice this again.
-Decaster 49.6
-OlymmpicG 49.6
-
-Help section notes from Colin
-Vector contains 400m times NOT the competitors (not the who)
-Numbers needs back tick but character columns do not.
-Mutate adds a new variable or a new value relating for each row.
+##Q.E What was the average points for competitors who ran the 400m in less #than 50 seconds vs. those than ran 400m in more than 50 seconds
 
 
-decathlonclean%>%
+#Need average/Mean points for those who ran 400m in more than 50seconds
+#Need average/Mean points from those who ran 400m in less than 50 seconds.
+
+
+A. Firstly broke this down into the mean for the 400m for each competition ##to practice this again.
+
+##Decaster 49.6
+##OlymmpicG 49.6
+
+##decath100m <-decathlonclean%>%
+  group_by(Competition)%>%
+  summarise(mean_100m = mean(`100m`))
+
+
+##Help section notes from Colin required to get this resolved and clear.
+##Vector contains 400m times NOT the competitors (not the who)
+##Numbers needs back tick but character columns do not.
+##Mutate adds a new variable or a new value relating for each row.
+
+
+##decathlonclean%>%
     select(`400m`,Points)%>% = tells what columns i want
     mutate(Less_than_50s = if_else (`400m`< 50, TRUE, FALSE)) # seperate out the sections of the equations (if X=Y then TRUE) - creates a new column
     
-    group_by(Less_than_50s)%>% - bringing together the two sections of the data lessthan 400m data set or tells us we are interested in 400m times that meet the criteria that we have specified.
-Summarise - brings it all together and the wrap up or interm calculation - use at the end of the code.
+##group_by(Less_than_50s)%>% - bringing together the two sections of the data lessthan 400m data set or tells us we are interested in 400m times that meet th ecriteria that we have specified.
+##Summarise - brings it all together and the wrap up or interm calculation - use at the end of the code.
 
 A.
 The average points for competitors who ran the 400m in less than 50 seconds was 7727 and for those who ran it in over 50 seconds was 8120.
 
 
+
+##decathlonclean%>%
+    select(`400m`,Points)%>% 
+    mutate(Less_than_50s = if_else (`400m`< 50, TRUE, FALSE))%>%
+    group_by(Less_than_50s)%>%
+    summarise(mean_of_points = mean(Points))
+           
 
 
