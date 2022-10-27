@@ -1786,13 +1786,21 @@ folder.</h1>
 <h1>Took time to review the data and consider what the content of the
 data looked like and if there were errors or anomalise in the data.</h1>
 </div>
+<div id="in-sumary-the-data-was-a-table-of-decathlon-scores-there-are-a-number-of-competitions-in-a-decathlon-and-these-scores-were-taken-over-the-course-of-two-competitions-decaster-and-aolympicg-there-was-only-one-set-of-data-so-no-requirment-to-join-the-data." class="section level1">
+<h1>In sumary the data was a table of decathlon scores (there are a
+number of competitions in a decathlon) and these scores were taken over
+the course of two competitions (Decaster and aOlympicG) There was only
+one set of data so no requirment to join the data.</h1>
+</div>
 <div id="revised-the-week-2-section-on-tidy-data-as-the-data-is-not-in-the-right-format-of-long-data-with-all-the-values-attributed-the-the-columns-and-the-variable-for-the-data." class="section level1">
 <h1>Revised the week 2 section on tidy data as the data is not in the
 right format of long data with all the values attributed the the columns
 and the variable for the data.</h1>
-<p>#Read the questions as this is the essence of what i need to achieve
+</div>
+<div id="read-the-questions-as-this-is-the-essence-of-what-i-need-to-achieve-and-to-focus-my-time-on-this.-as-opposed-to-lots-of-code-and-wrangling-that-does-not-really-answer-the-questions." class="section level1">
+<h1>Read the questions as this is the essence of what i need to achieve
 and to focus my time on this. As opposed to lots of code and wrangling
-that does not really answer the questions.</p>
+that does not really answer the questions.</h1>
 <div id="cleaning-the-data---a-process-of-reflection." class="section level3">
 <h3>Cleaning the data - a process of reflection.</h3>
 </div>
@@ -1800,10 +1808,10 @@ that does not really answer the questions.</p>
 <div id="q1.this-data-has-row-names---how-do-you-get-rid-of-them" class="section level1">
 <h1>Q1.This data has row names - how do you get rid of them?</h1>
 </div>
-<div id="a1.i-did-not-really-want-to-get-rid-of-them---we-want-to-be-able-to-convert-a-row-name-the-name-of-the-person-and-give-this-a-clear-column-name-so-that-we-are-able-to-still-attribute-a-score-to-a-named-individual." class="section level1">
-<h1>A1.I did not really want to get rid of them - we want to be able to
+<div id="a1.i-did-not-really-want-to-get-rid-of-them---i-wanted-to-be-able-to-convert-a-row-name-the-name-of-the-person-and-give-this-a-clear-column-name-so-i-was-able-to-still-attribute-a-score-to-a-named-individual." class="section level1">
+<h1>A1.I did not really want to get rid of them - I wanted to be able to
 convert a row name (the name of the person) and give this a clear column
-name so that we are able to still attribute a score to a named
+name so I was able to still attribute a score to a named
 individual.</h1>
 </div>
 <div id="so-essential-to-use-tibble" class="section level1">
@@ -1813,27 +1821,39 @@ individual.</h1>
 <p>#decathlonclean &lt;-decathlon%&gt;%
 tibble::rownames_to_column(“competitorname”) decathlon%&gt;%
 tibble::rownames_to_column</p>
-<p>#This then needed to be assigned to a new variable (which i had not
-done) #&lt;-decathlonclean It has to appear in front on the original
-data set and then appears in the data section. Clearly there was a need
-for me to return to the class notes again and revise the assignment of a
-variable.</p>
-<p>#Q2.This data isn’t tidy.</p>
+</div>
+<div id="this-then-needed-to-be-assigned-to-a-new-variable-which-i-had-not-done" class="section level1">
+<h1>This then needed to be assigned to a new variable (which i had not
+done)</h1>
+<p>#&lt;-decathlonclean # It has to appear in front on the original data
+set and then appears in the data section.<br />
+# Clearly there was a need for me to return to the class notes again and
+revise the assignment of a variable.</p>
+</div>
+<div id="q2.this-data-isnt-tidy." class="section level1">
+<h1>Q2.This data isn’t tidy.</h1>
 <p>#You will want better column header names.</p>
-<p>#A2 - Not sure that i would agree with that - what improvement could
-be made? I think from the clean i was able to answer the questions. But
-i know that this could probably be challenged as the purpose of the task
-and my opinion could be challenged.</p>
-<p>###Anaysis</p>
-<p>##Q.A # Who had the longest long jump seen in the data?</p>
+<p>#A2 what improvement could be made? I think from the clean i was able
+to answer the questions. But i know that this could probably be
+challenged as the purpose of the task . Appreciate I need to try and
+answer the questions in a more complete fashion</p>
+<div id="anaysis" class="section level3">
+<h3>Anaysis</h3>
+</div>
+<div id="q.a" class="section level2">
+<h2>Q.A</h2>
+</div>
+</div>
+<div id="who-had-the-longest-long-jump-seen-in-the-data" class="section level1">
+<h1>Who had the longest long jump seen in the data?</h1>
 </div>
 <div id="a---clay-had-the-longer-long-jump-with-a-measurement-of-7.96-m---but-this-was-from-ordering-the-data-once-in-the-data-set.-not-by-improving-on-the-code-or-using-coding.-so-time-to-revise-the-notes-again-and-have-a-second-attempt." class="section level1">
 <h1>A - Clay had the longer long jump with a measurement of 7.96 m - but
-this #was from ordering the data once in the data set. Not by improving
-on the #code or using coding. So time to revise the notes again and have
-a second #attempt.</h1>
+this # was from ordering the data once in the data set. Not by improving
+on the # code or using coding. So time to revise the notes again and
+have a second # attempt.</h1>
 <p>#Did then do this with the select function and created a new variable
-(decathlonlong) and in the desc order - think it worked</p>
+(decathlonlong) and in the desc order - it worked. Another miracle.</p>
 <p>#QB.What was the average 100m time in each competition?</p>
 </div>
 <div id="here-i-selected-the-competitions-and-created-a-mean-of-the-100m" class="section level1">
@@ -1844,31 +1864,60 @@ mean(Long.jump))</p>
 <h2>Answered this first by creating the mean of the long jump (not the
 right answer) so needed to go back and try again to add to the
 code.</h2>
-<p>##First select the competitions/100m - when 100 is included need to
-use back ##ticks top left key. 1 Decastar 11.2 2 OlympicG 10.9</p>
+</div>
+<div id="first-select-the-competitions100m---when-100-is-included-need-to-use-back-ticks-top-left-key.-remember-that" class="section level2">
+<h2>First select the competitions/100m - when 100 is included need to
+use back ticks top left key. Remember that!</h2>
+<p>1 Decastar 11.2 2 OlympicG 10.9</p>
 <p>#QC. Who had the highest total points across both competitions?</p>
 <p>A.Sebrle (Decaster) 8217 A.Sebrle (OlympicG) 8893</p>
-<p>#Q.D What was the shot-put scores for the top three competitors in
-each #competition?</p>
+</div>
+</div>
+<div id="q.d-what-was-the-shot-put-scores-for-the-top-three-competitors-in-each-competition" class="section level1">
+<h1>Q.D What was the shot-put scores for the top three competitors in
+each # competition?</h1>
 <p>A.Serbel,Clay and Karpov - but i think there is another stage
 required to separate out the competition names and also only get top 3.
 So i would need to have completed another section here to get to the
-final and full responce to the question.</p>
-<p>##Q.E What was the average points for competitors who ran the 400m in
-less #than 50 seconds vs. those than ran 400m in more than 50
-seconds</p>
-<p>#Need average/Mean points for those who ran 400m in more than
-50seconds #Need average/Mean points from those who ran 400m in less than
-50 seconds.</p>
-<p>A. Firstly broke this down into the mean for the 400m for each
-competition ##to practice this again.</p>
-<p>##Decaster 49.6 ##OlymmpicG 49.6</p>
+final and full response to the question.</p>
+</div>
+<div id="q.e-what-was-the-average-points-for-competitors-who-ran-the-400m-in-less-than-50-seconds-vs.-those-than-ran-400m-in-more-than-50-seconds" class="section level1">
+<h1>Q.E What was the average points for competitors who ran the 400m in
+less than 50 seconds vs. those than ran 400m in more than 50
+seconds</h1>
+</div>
+<div id="need-averagemean-points-for-those-who-ran-400m-in-more-than-50seconds" class="section level1">
+<h1>Need average/Mean points for those who ran 400m in more than
+50seconds</h1>
+</div>
+<div id="need-averagemean-points-from-those-who-ran-400m-in-less-than-50-seconds." class="section level1">
+<h1>Need average/Mean points from those who ran 400m in less than 50
+seconds.</h1>
+</div>
+<div id="a.-firstly-broke-this-down-into-the-mean-for-the-400m-for-each-competition-to-practice-this-again." class="section level1">
+<h1>A. Firstly broke this down into the mean for the 400m for each
+competition to practice this again.</h1>
+<div id="decaster-49.6" class="section level2">
+<h2>Decaster 49.6</h2>
+</div>
+<div id="olymmpicg-49.6" class="section level2">
+<h2>OlymmpicG 49.6</h2>
 <p>##decath100m &lt;-decathlonclean%&gt;% group_by(Competition)%&gt;%
 summarise(mean_100m = mean(<code>100m</code>))</p>
-<p>##Help section notes from Colin required to get this resolved and
-clear. ##Vector contains 400m times NOT the competitors (not the who)
-##Numbers needs back tick but character columns do not. ##Mutate adds a
-new variable or a new value relating for each row.</p>
+</div>
+<div id="help-section-notes-from-colin-required-to-get-this-resolved-and-clear." class="section level2">
+<h2>Help section notes from Colin required to get this resolved and
+clear.</h2>
+</div>
+<div id="vector-contains-400m-times-not-the-competitors-not-the-who" class="section level2">
+<h2>Vector contains 400m times NOT the competitors (not the who)</h2>
+</div>
+<div id="numbers-needs-back-tick-but-character-columns-do-not." class="section level2">
+<h2>Numbers needs back tick but character columns do not.</h2>
+</div>
+<div id="mutate-adds-a-new-variable-or-a-new-value-relating-for-each-row." class="section level2">
+<h2>Mutate adds a new variable or a new value relating for each
+row.</h2>
 <p>##decathlonclean%&gt;% select(<code>400m</code>,Points)%&gt;% = tells
 what columns i want mutate(Less_than_50s = if_else
 (<code>400m</code>&lt; 50, TRUE, FALSE)) # seperate out the sections of
@@ -1891,7 +1940,7 @@ mean(Points))</p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KIyMjIERpcnR5IERhdGEgUHJvamVjdCAtIFRhc2sgMSAtIERlY2F0aGxvbg0KDQojIE1WUA0KDQojIFNldCB1cCB0aGUgcHJvamVjdCBmb2xkZXJzIGFuZCBjb2xsYWJvcmF0b3JzIGluY2x1ZGVkIGluIHRoZSBkb2N1bWVudGF0aW9uDQojIERvd25sb2FkZWQgdGhlIGNzdiBkYXRhZmlsZXMgYW5kIGlucHV0IHRoZSBkYXRhIGludG8gdGhlIGZvbGRlci4NCiMgVG9vayB0aW1lIHRvIHJldmlldyB0aGUgZGF0YSBhbmQgY29uc2lkZXIgd2hhdCB0aGUgY29udGVudCBvZiB0aGUgZGF0YSBsb29rZWQgbGlrZSBhbmQgaWYgdGhlcmUgd2VyZSBlcnJvcnMgb3IgYW5vbWFsaXNlIGluIHRoZSBkYXRhLg0KIyBSZXZpc2VkIHRoZSB3ZWVrIDIgc2VjdGlvbiBvbiB0aWR5IGRhdGEgYXMgdGhlIGRhdGEgaXMgbm90IGluIHRoZSByaWdodCBmb3JtYXQgb2YgbG9uZyBkYXRhIHdpdGggYWxsIHRoZSB2YWx1ZXMgYXR0cmlidXRlZCB0aGUgdGhlIGNvbHVtbnMgYW5kIHRoZSB2YXJpYWJsZSBmb3IgdGhlIGRhdGEuDQojUmVhZCB0aGUgcXVlc3Rpb25zIGFzIHRoaXMgaXMgdGhlIGVzc2VuY2Ugb2Ygd2hhdCBpIG5lZWQgdG8gYWNoaWV2ZSBhbmQgdG8gZm9jdXMgbXkgdGltZSBvbiB0aGlzLiAgQXMgb3Bwb3NlZCB0byBsb3RzIG9mIGNvZGUgYW5kIHdyYW5nbGluZyB0aGF0IGRvZXMgbm90IHJlYWxseSBhbnN3ZXIgdGhlIHF1ZXN0aW9ucy4NCg0KIyMjIENsZWFuaW5nICB0aGUgZGF0YSAtIGEgcHJvY2VzcyBvZiByZWZsZWN0aW9uLg0KDQoNCiMgUTEuVGhpcyBkYXRhIGhhcyByb3cgbmFtZXMgLSBob3cgZG8geW91IGdldCByaWQgb2YgdGhlbT8NCg0KIyBBMS5JIGRpZCBub3QgcmVhbGx5IHdhbnQgdG8gZ2V0IHJpZCBvZiB0aGVtIC0gd2Ugd2FudCB0byBiZSBhYmxlIHRvIGNvbnZlcnQgYSByb3cgbmFtZSAodGhlIG5hbWUgb2YgdGhlIHBlcnNvbikgYW5kIGdpdmUgdGhpcyBhIGNsZWFyIGNvbHVtbiBuYW1lIHNvIHRoYXQgd2UgYXJlIGFibGUgdG8gc3RpbGwgYXR0cmlidXRlIGEgc2NvcmUgdG8gYSBuYW1lZCBpbmRpdmlkdWFsLg0KDQojIFNvIGVzc2VudGlhbCB0byB1c2UgdGliYmxlDQoNCiN0aWJibGU6OmFkZF9jb2x1bW4oInJvd25hbWVzIikNCg0KI2RlY2F0aGxvbiU+JQ0KI3RpYmJsZV9yb3cNCg0KI2RlY2F0aGxvbmNsZWFuIDwtZGVjYXRobG9uJT4lDQogIHRpYmJsZTo6cm93bmFtZXNfdG9fY29sdW1uKCJjb21wZXRpdG9ybmFtZSIpDQogIGRlY2F0aGxvbiU+JQ0KICB0aWJibGU6OnJvd25hbWVzX3RvX2NvbHVtbg0KICANCiAgDQojVGhpcyB0aGVuIG5lZWRlZCB0byBiZSBhc3NpZ25lZCB0byBhIG5ldyB2YXJpYWJsZSAod2hpY2ggaSBoYWQgbm90IGRvbmUpDQojPC1kZWNhdGhsb25jbGVhbiBJdCBoYXMgdG8gYXBwZWFyIGluIGZyb250IG9uIHRoZSBvcmlnaW5hbCBkYXRhIHNldCBhbmQgdGhlbiBhcHBlYXJzIGluIHRoZSBkYXRhIHNlY3Rpb24uICBDbGVhcmx5IHRoZXJlIHdhcyBhIG5lZWQgZm9yIG1lIHRvIHJldHVybiB0byB0aGUgY2xhc3Mgbm90ZXMgYWdhaW4gYW5kIHJldmlzZSB0aGUgYXNzaWdubWVudCBvZiBhIHZhcmlhYmxlLg0KICANCiAgDQojUTIuVGhpcyBkYXRhIGlzbuKAmXQgdGlkeS4NCg0KI1lvdSB3aWxsIHdhbnQgYmV0dGVyIGNvbHVtbiBoZWFkZXIgbmFtZXMuDQoNCiNBMiAtIE5vdCBzdXJlIHRoYXQgaSB3b3VsZCBhZ3JlZSB3aXRoIHRoYXQgLSB3aGF0IGltcHJvdmVtZW50IGNvdWxkIGJlIG1hZGU/IEkgdGhpbmsgZnJvbSB0aGUgY2xlYW4gaSB3YXMgYWJsZSB0byBhbnN3ZXIgdGhlIHF1ZXN0aW9ucy4gIEJ1dCBpIGtub3cgdGhhdCB0aGlzICBjb3VsZCBwcm9iYWJseSBiZSBjaGFsbGVuZ2VkIGFzIHRoZSBwdXJwb3NlIG9mIHRoZSB0YXNrIGFuZCBteSBvcGluaW9uIGNvdWxkIGJlIGNoYWxsZW5nZWQuDQoNCg0KIyMjQW5heXNpcyANCg0KDQojI1EuQQ0KIyBXaG8gaGFkIHRoZSBsb25nZXN0IGxvbmcganVtcCBzZWVuIGluIHRoZSBkYXRhPw0KDQojIEEgLSBDbGF5IGhhZCB0aGUgbG9uZ2VyIGxvbmcganVtcCB3aXRoIGEgbWVhc3VyZW1lbnQgb2YgNy45NiBtIC0gYnV0IHRoaXMgI3dhcyBmcm9tIG9yZGVyaW5nIHRoZSBkYXRhIG9uY2UgaW4gdGhlIGRhdGEgc2V0LiAgTm90IGJ5IGltcHJvdmluZyBvbiB0aGUgI2NvZGUgb3IgdXNpbmcgY29kaW5nLiBTbyB0aW1lIHRvIHJldmlzZSB0aGUgbm90ZXMgYWdhaW4gYW5kIGhhdmUgYSBzZWNvbmQgI2F0dGVtcHQuDQoNCiNEaWQgdGhlbiBkbyB0aGlzIHdpdGggdGhlIHNlbGVjdCBmdW5jdGlvbiBhbmQgY3JlYXRlZCBhIG5ldyB2YXJpYWJsZSAoZGVjYXRobG9ubG9uZykgYW5kIGluIHRoZSBkZXNjIG9yZGVyIC0gdGhpbmsgaXQgd29ya2VkDQoNCg0KI1FCLldoYXQgd2FzIHRoZSBhdmVyYWdlIDEwMG0gdGltZSBpbiBlYWNoIGNvbXBldGl0aW9uPw0KDQojIEhlcmUgSSBTZWxlY3RlZCB0aGUgY29tcGV0aXRpb25zIGFuZCBjcmVhdGVkIGEgbWVhbiBvZiB0aGUgMTAwbQ0KDQojI2RlY2F0aGxvbmdqdW1wJT4lDQogICMjc3VtbWFyaXNlKG1lYW5fTG9uZy5qdW1wID0gbWVhbihMb25nLmp1bXApKQ0KDQojIyBBbnN3ZXJlZCB0aGlzIGZpcnN0IGJ5IGNyZWF0aW5nIHRoZSBtZWFuIG9mIHRoZSBsb25nIGp1bXAgKG5vdCB0aGUgcmlnaHQgYW5zd2VyKSBzbyBuZWVkZWQgdG8gZ28gYmFjayBhbmQgdHJ5IGFnYWluIHRvIGFkZCB0byB0aGUgY29kZS4NCg0KIyNGaXJzdCBzZWxlY3QgdGhlIGNvbXBldGl0aW9ucy8xMDBtIC0gd2hlbiAxMDAgaXMgaW5jbHVkZWQgbmVlZCB0byB1c2UgYmFjayAjI3RpY2tzIHRvcCBsZWZ0IGtleS4NCjEgRGVjYXN0YXIgICAgICAgICAxMS4yDQoyIE9seW1waWNHICAgICAgICAgMTAuOQ0KDQoNCiNRQy4gV2hvIGhhZCB0aGUgaGlnaGVzdCB0b3RhbCBwb2ludHMgYWNyb3NzIGJvdGggY29tcGV0aXRpb25zPw0KDQoNCkEuU2VicmxlIChEZWNhc3RlcikgODIxNw0KQS5TZWJybGUgKE9seW1waWNHKSA4ODkzDQoNCiNRLkQgV2hhdCB3YXMgdGhlIHNob3QtcHV0IHNjb3JlcyBmb3IgdGhlIHRvcCB0aHJlZSBjb21wZXRpdG9ycyBpbiBlYWNoICNjb21wZXRpdGlvbj8NCg0KQS5TZXJiZWwsQ2xheSBhbmQgS2FycG92IC0gYnV0IGkgdGhpbmsgdGhlcmUgaXMgYW5vdGhlciBzdGFnZSByZXF1aXJlZCB0byBzZXBhcmF0ZSBvdXQgdGhlIGNvbXBldGl0aW9uIG5hbWVzIGFuZCBhbHNvIG9ubHkgZ2V0IHRvcCAzLiAgU28gaSB3b3VsZCBuZWVkIHRvIGhhdmUgY29tcGxldGVkIGFub3RoZXIgc2VjdGlvbiBoZXJlIHRvIGdldCB0byB0aGUgZmluYWwgYW5kIGZ1bGwgcmVzcG9uY2UgdG8gdGhlIHF1ZXN0aW9uLg0KDQojI1EuRSBXaGF0IHdhcyB0aGUgYXZlcmFnZSBwb2ludHMgZm9yIGNvbXBldGl0b3JzIHdobyByYW4gdGhlIDQwMG0gaW4gbGVzcyAjdGhhbiA1MCBzZWNvbmRzIHZzLiB0aG9zZSB0aGFuIHJhbiA0MDBtIGluIG1vcmUgdGhhbiA1MCBzZWNvbmRzDQoNCg0KI05lZWQgYXZlcmFnZS9NZWFuIHBvaW50cyBmb3IgdGhvc2Ugd2hvIHJhbiA0MDBtIGluIG1vcmUgdGhhbiA1MHNlY29uZHMNCiNOZWVkIGF2ZXJhZ2UvTWVhbiBwb2ludHMgZnJvbSB0aG9zZSB3aG8gcmFuIDQwMG0gaW4gbGVzcyB0aGFuIDUwIHNlY29uZHMuDQoNCg0KQS4gRmlyc3RseSBicm9rZSB0aGlzIGRvd24gaW50byB0aGUgbWVhbiBmb3IgdGhlIDQwMG0gZm9yIGVhY2ggY29tcGV0aXRpb24gIyN0byBwcmFjdGljZSB0aGlzIGFnYWluLg0KDQojI0RlY2FzdGVyIDQ5LjYNCiMjT2x5bW1waWNHIDQ5LjYNCg0KIyNkZWNhdGgxMDBtIDwtZGVjYXRobG9uY2xlYW4lPiUNCiAgZ3JvdXBfYnkoQ29tcGV0aXRpb24pJT4lDQogIHN1bW1hcmlzZShtZWFuXzEwMG0gPSBtZWFuKGAxMDBtYCkpDQoNCg0KIyNIZWxwIHNlY3Rpb24gbm90ZXMgZnJvbSBDb2xpbiByZXF1aXJlZCB0byBnZXQgdGhpcyByZXNvbHZlZCBhbmQgY2xlYXIuDQojI1ZlY3RvciBjb250YWlucyA0MDBtIHRpbWVzIE5PVCB0aGUgY29tcGV0aXRvcnMgKG5vdCB0aGUgd2hvKQ0KIyNOdW1iZXJzIG5lZWRzIGJhY2sgdGljayBidXQgY2hhcmFjdGVyIGNvbHVtbnMgZG8gbm90Lg0KIyNNdXRhdGUgYWRkcyBhIG5ldyB2YXJpYWJsZSBvciBhIG5ldyB2YWx1ZSByZWxhdGluZyBmb3IgZWFjaCByb3cuDQoNCg0KIyNkZWNhdGhsb25jbGVhbiU+JQ0KICAgIHNlbGVjdChgNDAwbWAsUG9pbnRzKSU+JSA9IHRlbGxzIHdoYXQgY29sdW1ucyBpIHdhbnQNCiAgICBtdXRhdGUoTGVzc190aGFuXzUwcyA9IGlmX2Vsc2UgKGA0MDBtYDwgNTAsIFRSVUUsIEZBTFNFKSkgIyBzZXBlcmF0ZSBvdXQgdGhlIHNlY3Rpb25zIG9mIHRoZSBlcXVhdGlvbnMgKGlmIFg9WSB0aGVuIFRSVUUpIC0gY3JlYXRlcyBhIG5ldyBjb2x1bW4NCiAgICANCiMjZ3JvdXBfYnkoTGVzc190aGFuXzUwcyklPiUgLSBicmluZ2luZyB0b2dldGhlciB0aGUgdHdvIHNlY3Rpb25zIG9mIHRoZSBkYXRhIGxlc3N0aGFuIDQwMG0gZGF0YSBzZXQgb3IgdGVsbHMgdXMgd2UgYXJlIGludGVyZXN0ZWQgaW4gNDAwbSB0aW1lcyB0aGF0IG1lZXQgdGggZWNyaXRlcmlhIHRoYXQgd2UgaGF2ZSBzcGVjaWZpZWQuDQojI1N1bW1hcmlzZSAtIGJyaW5ncyBpdCBhbGwgdG9nZXRoZXIgYW5kIHRoZSB3cmFwIHVwIG9yIGludGVybSBjYWxjdWxhdGlvbiAtIHVzZSBhdCB0aGUgZW5kIG9mIHRoZSBjb2RlLg0KDQpBLg0KVGhlIGF2ZXJhZ2UgcG9pbnRzIGZvciBjb21wZXRpdG9ycyB3aG8gcmFuIHRoZSA0MDBtIGluIGxlc3MgdGhhbiA1MCBzZWNvbmRzIHdhcyA3NzI3IGFuZCBmb3IgdGhvc2Ugd2hvIHJhbiBpdCBpbiBvdmVyIDUwIHNlY29uZHMgd2FzIDgxMjAuDQoNCg0KDQojI2RlY2F0aGxvbmNsZWFuJT4lDQogICAgc2VsZWN0KGA0MDBtYCxQb2ludHMpJT4lIA0KICAgIG11dGF0ZShMZXNzX3RoYW5fNTBzID0gaWZfZWxzZSAoYDQwMG1gPCA1MCwgVFJVRSwgRkFMU0UpKSU+JQ0KICAgIGdyb3VwX2J5KExlc3NfdGhhbl81MHMpJT4lDQogICAgc3VtbWFyaXNlKG1lYW5fb2ZfcG9pbnRzID0gbWVhbihQb2ludHMpKQ0KICAgICAgICAgICANCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KIyMjIERpcnR5IERhdGEgUHJvamVjdCAtIFRhc2sgMSAtIERlY2F0aGxvbg0KDQojIE1WUA0KDQojIFNldCB1cCB0aGUgcHJvamVjdCBmb2xkZXJzIGFuZCBjb2xsYWJvcmF0b3JzIGluY2x1ZGVkIGluIHRoZSBkb2N1bWVudGF0aW9uDQojIERvd25sb2FkZWQgdGhlIGNzdiBkYXRhZmlsZXMgYW5kIGlucHV0IHRoZSBkYXRhIGludG8gdGhlIGZvbGRlci4NCiMgVG9vayB0aW1lIHRvIHJldmlldyB0aGUgZGF0YSBhbmQgY29uc2lkZXIgd2hhdCB0aGUgY29udGVudCBvZiB0aGUgZGF0YSBsb29rZWQgbGlrZSBhbmQgaWYgdGhlcmUgd2VyZSBlcnJvcnMgb3IgYW5vbWFsaXNlIGluIHRoZSBkYXRhLg0KIyBJbiBzdW1hcnkgdGhlIGRhdGEgd2FzIGEgdGFibGUgb2YgZGVjYXRobG9uIHNjb3JlcyAodGhlcmUgYXJlIGEgbnVtYmVyIG9mIGNvbXBldGl0aW9ucyBpbiBhIGRlY2F0aGxvbikgYW5kIHRoZXNlIHNjb3JlcyB3ZXJlIHRha2VuIG92ZXIgdGhlIGNvdXJzZSBvZiB0d28gY29tcGV0aXRpb25zIChEZWNhc3RlciBhbmQgYU9seW1waWNHKSAgVGhlcmUgd2FzIG9ubHkgb25lIHNldCBvZiBkYXRhIHNvIG5vIHJlcXVpcm1lbnQgdG8gam9pbiB0aGUgZGF0YS4NCiMgUmV2aXNlZCB0aGUgd2VlayAyIHNlY3Rpb24gb24gdGlkeSBkYXRhIGFzIHRoZSBkYXRhIGlzIG5vdCBpbiB0aGUgcmlnaHQgZm9ybWF0IG9mIGxvbmcgZGF0YSB3aXRoIGFsbCB0aGUgdmFsdWVzIGF0dHJpYnV0ZWQgdGhlIHRoZSBjb2x1bW5zIGFuZCB0aGUgdmFyaWFibGUgZm9yIHRoZSBkYXRhLg0KIyBSZWFkIHRoZSBxdWVzdGlvbnMgYXMgdGhpcyBpcyB0aGUgZXNzZW5jZSBvZiB3aGF0IGkgbmVlZCB0byBhY2hpZXZlIGFuZCB0byBmb2N1cyBteSB0aW1lIG9uIHRoaXMuICBBcyBvcHBvc2VkIHRvIGxvdHMgb2YgY29kZSBhbmQgd3JhbmdsaW5nIHRoYXQgZG9lcyBub3QgcmVhbGx5IGFuc3dlciB0aGUgcXVlc3Rpb25zLg0KDQojIyMgIENsZWFuaW5nICB0aGUgZGF0YSAtIGEgcHJvY2VzcyBvZiByZWZsZWN0aW9uLg0KDQoNCiMgUTEuVGhpcyBkYXRhIGhhcyByb3cgbmFtZXMgLSBob3cgZG8geW91IGdldCByaWQgb2YgdGhlbT8NCg0KIyBBMS5JIGRpZCBub3QgcmVhbGx5IHdhbnQgdG8gZ2V0IHJpZCBvZiB0aGVtIC0gSSAgd2FudGVkIHRvIGJlIGFibGUgdG8gY29udmVydCBhIHJvdyBuYW1lICh0aGUgbmFtZSBvZiB0aGUgcGVyc29uKSBhbmQgZ2l2ZSB0aGlzIGEgY2xlYXIgY29sdW1uIG5hbWUgc28gSSB3YXMgYWJsZSB0byBzdGlsbCBhdHRyaWJ1dGUgYSBzY29yZSB0byBhIG5hbWVkIGluZGl2aWR1YWwuDQoNCiMgU28gZXNzZW50aWFsIHRvIHVzZSB0aWJibGUNCg0KI3RpYmJsZTo6YWRkX2NvbHVtbigicm93bmFtZXMiKQ0KDQojZGVjYXRobG9uJT4lDQojdGliYmxlX3Jvdw0KDQojZGVjYXRobG9uY2xlYW4gPC1kZWNhdGhsb24lPiUNCiAgdGliYmxlOjpyb3duYW1lc190b19jb2x1bW4oImNvbXBldGl0b3JuYW1lIikNCiAgZGVjYXRobG9uJT4lDQogIHRpYmJsZTo6cm93bmFtZXNfdG9fY29sdW1uDQogIA0KICANCiMgVGhpcyB0aGVuIG5lZWRlZCB0byBiZSBhc3NpZ25lZCB0byBhIG5ldyB2YXJpYWJsZSAod2hpY2ggaSBoYWQgbm90IGRvbmUpDQojPC1kZWNhdGhsb25jbGVhbg0KIyAgSXQgaGFzIHRvIGFwcGVhciBpbiBmcm9udCBvbiB0aGUgb3JpZ2luYWwgZGF0YSBzZXQgYW5kIHRoZW4gYXBwZWFycyBpbiB0aGUgZGF0YSBzZWN0aW9uLiAgDQojICBDbGVhcmx5IHRoZXJlIHdhcyBhIG5lZWQgZm9yIG1lIHRvIHJldHVybiB0byB0aGUgY2xhc3Mgbm90ZXMgYWdhaW4gYW5kIHJldmlzZSB0aGUgYXNzaWdubWVudCBvZiBhIHZhcmlhYmxlLg0KICANCiAgDQojICBRMi5UaGlzIGRhdGEgaXNu4oCZdCB0aWR5Lg0KDQojWW91IHdpbGwgd2FudCBiZXR0ZXIgY29sdW1uIGhlYWRlciBuYW1lcy4NCg0KI0EyIHdoYXQgaW1wcm92ZW1lbnQgY291bGQgYmUgbWFkZT8gSSB0aGluayBmcm9tIHRoZSBjbGVhbiBpIHdhcyBhYmxlIHRvIGFuc3dlciB0aGUgcXVlc3Rpb25zLiAgQnV0IGkga25vdyB0aGF0IHRoaXMgIGNvdWxkIHByb2JhYmx5IGJlIGNoYWxsZW5nZWQgYXMgdGhlIHB1cnBvc2Ugb2YgdGhlIHRhc2sgLiAgQXBwcmVjaWF0ZSBJIG5lZWQgdG8gdHJ5IGFuZCBhbnN3ZXIgdGhlIHF1ZXN0aW9ucyBpbiBhIG1vcmUgY29tcGxldGUgZmFzaGlvbg0KDQoNCiMjIyAgQW5heXNpcyANCg0KDQojIyAgUS5BDQojIFdobyBoYWQgdGhlIGxvbmdlc3QgbG9uZyBqdW1wIHNlZW4gaW4gdGhlIGRhdGE/DQoNCiMgQSAtIENsYXkgaGFkIHRoZSBsb25nZXIgbG9uZyBqdW1wIHdpdGggYSBtZWFzdXJlbWVudCBvZiA3Ljk2IG0gLSBidXQgdGhpcyAjICB3YXMgZnJvbSBvcmRlcmluZyB0aGUgZGF0YSBvbmNlIGluIHRoZSBkYXRhIHNldC4gIE5vdCBieSBpbXByb3Zpbmcgb24gdGhlICMgIGNvZGUgb3IgdXNpbmcgY29kaW5nLiBTbyB0aW1lIHRvIHJldmlzZSB0aGUgbm90ZXMgYWdhaW4gYW5kIGhhdmUgYSBzZWNvbmQgIyAgYXR0ZW1wdC4NCg0KI0RpZCB0aGVuIGRvIHRoaXMgd2l0aCB0aGUgc2VsZWN0IGZ1bmN0aW9uIGFuZCBjcmVhdGVkIGEgbmV3IHZhcmlhYmxlIChkZWNhdGhsb25sb25nKSBhbmQgaW4gdGhlIGRlc2Mgb3JkZXIgLSBpdCB3b3JrZWQuICBBbm90aGVyIG1pcmFjbGUuDQoNCg0KI1FCLldoYXQgd2FzIHRoZSBhdmVyYWdlIDEwMG0gdGltZSBpbiBlYWNoIGNvbXBldGl0aW9uPw0KDQojIEhlcmUgSSBTZWxlY3RlZCB0aGUgY29tcGV0aXRpb25zIGFuZCBjcmVhdGVkIGEgbWVhbiBvZiB0aGUgMTAwbQ0KDQojI2RlY2F0aGxvbmdqdW1wJT4lDQogICMjc3VtbWFyaXNlKG1lYW5fTG9uZy5qdW1wID0gbWVhbihMb25nLmp1bXApKQ0KDQojIyBBbnN3ZXJlZCB0aGlzIGZpcnN0IGJ5IGNyZWF0aW5nIHRoZSBtZWFuIG9mIHRoZSBsb25nIGp1bXAgKG5vdCB0aGUgcmlnaHQgYW5zd2VyKSBzbyBuZWVkZWQgdG8gZ28gYmFjayBhbmQgdHJ5IGFnYWluIHRvIGFkZCB0byB0aGUgY29kZS4NCg0KIyMgIEZpcnN0IHNlbGVjdCB0aGUgY29tcGV0aXRpb25zLzEwMG0gLSB3aGVuIDEwMCBpcyBpbmNsdWRlZCBuZWVkIHRvIHVzZSBiYWNrIHRpY2tzIHRvcCBsZWZ0IGtleS4gUmVtZW1iZXIgdGhhdCENCg0KMSBEZWNhc3RhciAgICAgICAgIDExLjINCjIgT2x5bXBpY0cgICAgICAgICAxMC45DQoNCg0KI1FDLiBXaG8gaGFkIHRoZSBoaWdoZXN0IHRvdGFsIHBvaW50cyBhY3Jvc3MgYm90aCBjb21wZXRpdGlvbnM/DQoNCg0KQS5TZWJybGUgKERlY2FzdGVyKSA4MjE3DQpBLlNlYnJsZSAoT2x5bXBpY0cpIDg4OTMNCg0KIyAgUS5EIFdoYXQgd2FzIHRoZSBzaG90LXB1dCBzY29yZXMgZm9yIHRoZSB0b3AgdGhyZWUgY29tcGV0aXRvcnMgaW4gZWFjaCAjICBjb21wZXRpdGlvbj8NCg0KQS5TZXJiZWwsQ2xheSBhbmQgS2FycG92IC0gYnV0IGkgdGhpbmsgdGhlcmUgaXMgYW5vdGhlciBzdGFnZSByZXF1aXJlZCB0byBzZXBhcmF0ZSBvdXQgdGhlIGNvbXBldGl0aW9uIG5hbWVzIGFuZCBhbHNvIG9ubHkgZ2V0IHRvcCAzLiAgU28gaSB3b3VsZCBuZWVkIHRvIGhhdmUgY29tcGxldGVkIGFub3RoZXIgc2VjdGlvbiBoZXJlIHRvIGdldCB0byB0aGUgZmluYWwgYW5kIGZ1bGwgcmVzcG9uc2UgdG8gdGhlIHF1ZXN0aW9uLg0KDQojICBRLkUgV2hhdCB3YXMgdGhlIGF2ZXJhZ2UgcG9pbnRzIGZvciBjb21wZXRpdG9ycyB3aG8gcmFuIHRoZSA0MDBtIGluIGxlc3MgIHRoYW4gNTAgc2Vjb25kcyB2cy4gdGhvc2UgdGhhbiByYW4gNDAwbSBpbiBtb3JlIHRoYW4gNTAgc2Vjb25kcw0KDQoNCiMgIE5lZWQgYXZlcmFnZS9NZWFuIHBvaW50cyBmb3IgdGhvc2Ugd2hvIHJhbiA0MDBtIGluIG1vcmUgdGhhbiA1MHNlY29uZHMNCiMgIE5lZWQgYXZlcmFnZS9NZWFuIHBvaW50cyBmcm9tIHRob3NlIHdobyByYW4gNDAwbSBpbiBsZXNzIHRoYW4gNTAgc2Vjb25kcy4NCg0KDQojICBBLiBGaXJzdGx5IGJyb2tlIHRoaXMgZG93biBpbnRvIHRoZSBtZWFuIGZvciB0aGUgNDAwbSBmb3IgZWFjaCBjb21wZXRpdGlvbiB0byBwcmFjdGljZSB0aGlzIGFnYWluLg0KDQojIyAgRGVjYXN0ZXIgNDkuNg0KIyMgIE9seW1tcGljRyA0OS42DQoNCiMjZGVjYXRoMTAwbSA8LWRlY2F0aGxvbmNsZWFuJT4lDQogIGdyb3VwX2J5KENvbXBldGl0aW9uKSU+JQ0KICBzdW1tYXJpc2UobWVhbl8xMDBtID0gbWVhbihgMTAwbWApKQ0KDQoNCiMjICBIZWxwIHNlY3Rpb24gbm90ZXMgZnJvbSBDb2xpbiByZXF1aXJlZCB0byBnZXQgdGhpcyByZXNvbHZlZCBhbmQgY2xlYXIuDQojIyAgVmVjdG9yIGNvbnRhaW5zIDQwMG0gdGltZXMgTk9UIHRoZSBjb21wZXRpdG9ycyAobm90IHRoZSB3aG8pDQojIyAgTnVtYmVycyBuZWVkcyBiYWNrIHRpY2sgYnV0IGNoYXJhY3RlciBjb2x1bW5zIGRvIG5vdC4NCiMjICBNdXRhdGUgYWRkcyBhIG5ldyB2YXJpYWJsZSBvciBhIG5ldyB2YWx1ZSByZWxhdGluZyBmb3IgZWFjaCByb3cuDQoNCg0KIyNkZWNhdGhsb25jbGVhbiU+JQ0KICAgIHNlbGVjdChgNDAwbWAsUG9pbnRzKSU+JSA9IHRlbGxzIHdoYXQgY29sdW1ucyBpIHdhbnQNCiAgICBtdXRhdGUoTGVzc190aGFuXzUwcyA9IGlmX2Vsc2UgKGA0MDBtYDwgNTAsIFRSVUUsIEZBTFNFKSkgIyBzZXBlcmF0ZSBvdXQgdGhlIHNlY3Rpb25zIG9mIHRoZSBlcXVhdGlvbnMgKGlmIFg9WSB0aGVuIFRSVUUpIC0gY3JlYXRlcyBhIG5ldyBjb2x1bW4NCiAgICANCiMjZ3JvdXBfYnkoTGVzc190aGFuXzUwcyklPiUgLSBicmluZ2luZyB0b2dldGhlciB0aGUgdHdvIHNlY3Rpb25zIG9mIHRoZSBkYXRhIGxlc3N0aGFuIDQwMG0gZGF0YSBzZXQgb3IgdGVsbHMgdXMgd2UgYXJlIGludGVyZXN0ZWQgaW4gNDAwbSB0aW1lcyB0aGF0IG1lZXQgdGggZWNyaXRlcmlhIHRoYXQgd2UgaGF2ZSBzcGVjaWZpZWQuDQojI1N1bW1hcmlzZSAtIGJyaW5ncyBpdCBhbGwgdG9nZXRoZXIgYW5kIHRoZSB3cmFwIHVwIG9yIGludGVybSBjYWxjdWxhdGlvbiAtIHVzZSBhdCB0aGUgZW5kIG9mIHRoZSBjb2RlLg0KDQpBLg0KVGhlIGF2ZXJhZ2UgcG9pbnRzIGZvciBjb21wZXRpdG9ycyB3aG8gcmFuIHRoZSA0MDBtIGluIGxlc3MgdGhhbiA1MCBzZWNvbmRzIHdhcyA3NzI3IGFuZCBmb3IgdGhvc2Ugd2hvIHJhbiBpdCBpbiBvdmVyIDUwIHNlY29uZHMgd2FzIDgxMjAuDQoNCg0KDQojI2RlY2F0aGxvbmNsZWFuJT4lDQogICAgc2VsZWN0KGA0MDBtYCxQb2ludHMpJT4lIA0KICAgIG11dGF0ZShMZXNzX3RoYW5fNTBzID0gaWZfZWxzZSAoYDQwMG1gPCA1MCwgVFJVRSwgRkFMU0UpKSU+JQ0KICAgIGdyb3VwX2J5KExlc3NfdGhhbl81MHMpJT4lDQogICAgc3VtbWFyaXNlKG1lYW5fb2ZfcG9pbnRzID0gbWVhbihQb2ludHMpKQ0KICAgICAgICAgICANCg0KDQo=</div>
 
 
 

@@ -11,14 +11,14 @@ output: html_notebook
 # Took time to review the data and consider what the content of the data looked like and if there were errors or anomalise in the data.
 # In sumary the data was a table of decathlon scores (there are a number of competitions in a decathlon) and these scores were taken over the course of two competitions (Decaster and aOlympicG)  There was only one set of data so no requirment to join the data.
 # Revised the week 2 section on tidy data as the data is not in the right format of long data with all the values attributed the the columns and the variable for the data.
-#Read the questions as this is the essence of what i need to achieve and to focus my time on this.  As opposed to lots of code and wrangling that does not really answer the questions.
+# Read the questions as this is the essence of what i need to achieve and to focus my time on this.  As opposed to lots of code and wrangling that does not really answer the questions.
 
-### Cleaning  the data - a process of reflection.
+###  Cleaning  the data - a process of reflection.
 
 
 # Q1.This data has row names - how do you get rid of them?
 
-# A1.I did not really want to get rid of them - we want to be able to convert a row name (the name of the person) and give this a clear column name so that we are able to still attribute a score to a named individual.
+# A1.I did not really want to get rid of them - I  wanted to be able to convert a row name (the name of the person) and give this a clear column name so I was able to still attribute a score to a named individual.
 
 # So essential to use tibble
 
@@ -33,26 +33,28 @@ output: html_notebook
   tibble::rownames_to_column
   
   
-#This then needed to be assigned to a new variable (which i had not done)
-#<-decathlonclean It has to appear in front on the original data set and then appears in the data section.  Clearly there was a need for me to return to the class notes again and revise the assignment of a variable.
+# This then needed to be assigned to a new variable (which i had not done)
+#<-decathlonclean
+#  It has to appear in front on the original data set and then appears in the data section.  
+#  Clearly there was a need for me to return to the class notes again and revise the assignment of a variable.
   
   
-#Q2.This data isn’t tidy.
+#  Q2.This data isn’t tidy.
 
 #You will want better column header names.
 
-#A2 - Not sure that i would agree with that - what improvement could be made? I think from the clean i was able to answer the questions.  But i know that this  could probably be challenged as the purpose of the task and my opinion could be challenged.
+#A2 what improvement could be made? I think from the clean i was able to answer the questions.  But i know that this  could probably be challenged as the purpose of the task .  Appreciate I need to try and answer the questions in a more complete fashion
 
 
-###Anaysis 
+###  Anaysis 
 
 
-##Q.A
+##  Q.A
 # Who had the longest long jump seen in the data?
 
-# A - Clay had the longer long jump with a measurement of 7.96 m - but this #was from ordering the data once in the data set.  Not by improving on the #code or using coding. So time to revise the notes again and have a second #attempt.
+# A - Clay had the longer long jump with a measurement of 7.96 m - but this #  was from ordering the data once in the data set.  Not by improving on the #  code or using coding. So time to revise the notes again and have a second #  attempt.
 
-#Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - think it worked
+#Did then do this with the select function and created a new variable (decathlonlong) and in the desc order - it worked.  Another miracle.
 
 
 #QB.What was the average 100m time in each competition?
@@ -64,7 +66,8 @@ output: html_notebook
 
 ## Answered this first by creating the mean of the long jump (not the right answer) so needed to go back and try again to add to the code.
 
-##First select the competitions/100m - when 100 is included need to use back ##ticks top left key.
+##  First select the competitions/100m - when 100 is included need to use back ticks top left key. Remember that!
+
 1 Decastar         11.2
 2 OlympicG         10.9
 
@@ -75,31 +78,31 @@ output: html_notebook
 A.Sebrle (Decaster) 8217
 A.Sebrle (OlympicG) 8893
 
-#Q.D What was the shot-put scores for the top three competitors in each #competition?
+#  Q.D What was the shot-put scores for the top three competitors in each #  competition?
 
-A.Serbel,Clay and Karpov - but i think there is another stage required to separate out the competition names and also only get top 3.  So i would need to have completed another section here to get to the final and full responce to the question.
+A.Serbel,Clay and Karpov - but i think there is another stage required to separate out the competition names and also only get top 3.  So i would need to have completed another section here to get to the final and full response to the question.
 
-##Q.E What was the average points for competitors who ran the 400m in less #than 50 seconds vs. those than ran 400m in more than 50 seconds
-
-
-#Need average/Mean points for those who ran 400m in more than 50seconds
-#Need average/Mean points from those who ran 400m in less than 50 seconds.
+#  Q.E What was the average points for competitors who ran the 400m in less  than 50 seconds vs. those than ran 400m in more than 50 seconds
 
 
-A. Firstly broke this down into the mean for the 400m for each competition ##to practice this again.
+#  Need average/Mean points for those who ran 400m in more than 50seconds
+#  Need average/Mean points from those who ran 400m in less than 50 seconds.
 
-##Decaster 49.6
-##OlymmpicG 49.6
+
+#  A. Firstly broke this down into the mean for the 400m for each competition to practice this again.
+
+##  Decaster 49.6
+##  OlymmpicG 49.6
 
 ##decath100m <-decathlonclean%>%
   group_by(Competition)%>%
   summarise(mean_100m = mean(`100m`))
 
 
-##Help section notes from Colin required to get this resolved and clear.
-##Vector contains 400m times NOT the competitors (not the who)
-##Numbers needs back tick but character columns do not.
-##Mutate adds a new variable or a new value relating for each row.
+##  Help section notes from Colin required to get this resolved and clear.
+##  Vector contains 400m times NOT the competitors (not the who)
+##  Numbers needs back tick but character columns do not.
+##  Mutate adds a new variable or a new value relating for each row.
 
 
 ##decathlonclean%>%
