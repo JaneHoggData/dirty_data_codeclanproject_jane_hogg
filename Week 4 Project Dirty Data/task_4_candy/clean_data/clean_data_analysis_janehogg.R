@@ -9,7 +9,7 @@ read.csv(candy_2017)
 mega_data <-bind_rows(candy_2015,candy_2016,candy_2017)
 
 
-head(candy_megadata)
+head(mega_data)
 
 #select two columns only 9349 and 2 variable
 mega_datecleana <- mega_data%>%
@@ -19,13 +19,6 @@ mega_datecleana <- mega_data%>%
 
 mega_datecleana <- mega_data%>%
   select(how_old_are_you,q1_going_out)
-  
-
-
-
-
-
-
   
 
  mega_cleanb <- mega_datecleana%>%
@@ -90,7 +83,15 @@ mega_datanoinfinity <-mega_data%>%
 #this did work - hurrah
 
    
+#Started to try and get to q1 and could really do with another day and 
+#and might have cracked it.
+
+   mega_data%>%
+     mutate(butterfinger = as.character(butterfinger, na.rm = TRUE))
    
+   
+    
+
 
    
    
