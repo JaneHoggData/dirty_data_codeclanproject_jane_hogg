@@ -5,41 +5,40 @@ output: html_notebook
  
 ## Candy Halloween Horror Hierachy
 
-#Wrote the new clean data into a new folder.
-# Revised the joins function to consider what needed to answer key questions
-#Decided to complete a bind to create megadate and then answer the questions.
-#Need to clean again. Back again to the dataset and consider the cleaning
-#Cleaned the NA from the age column. But realised now that there are characted and numbers in the columns (providing a drop down menu of ages would have stopped rougu characted date appearing in this column)
+# 1 Background
+#  Wrote the new clean data into a new folder.
+#  Revised the joins function to consider what needed to answer key questions
+#  Decided to complete a bind to create megadate and then answer the questions.
+#  Need to clean again. Back again to the dataset and consider the cleaning
+#  Cleaned the NA from the age column. But realised now that there are     characted and numbers in the columns (providing a drop down menu of ages would have stopped rougu characted date appearing in this column)
 
-###Analysis Questions
+###  Analysis Questions
 
 
-
-
-1.4.1
+#  1.4.1
 Q1.What is the total number of candy ratings given across the three years.
 (Number of candy ratings, not the number of raters. Don’t count missing values)
 
 #so this requires to count the number of ratings in each column
 mega data
-clear na
+clear na -
 sum for each column
-
+But didn't make it the this question - would haveliked another day.
 
 Q2 What was the average age of people who are NOT going out trick or treating?
-#split into two parts
-#all people who are answer yes to the trick and treat question
-#and then the mean of the age from this group
+#  split this into two parts
+#  all people who are answer yes to the trick and treat question
+# and then the mean of the age from this group  But then needed to ensure all NA were removed from age.
 
 
 A tibble: 1 × 1
   mega_cleanb
         <dbl>
 1          NA
-#Warning message:
-#In mean.default(how_old_are_you) :
+#  Warning message:
+#  In mean.default(how_old_are_you) :
   #argument is not numeric or logical: returning NA
-#But this had run and would allow me to turn the column to numeric and filtering the NA values
+#  But this had run and would allow me to turn the column to numeric and   filtering the NA values
   
   
 Warning message:
@@ -57,9 +56,9 @@ Problem while computing `how_old_are_you = as.numeric(how_old_are_you)`.
    mutate(average_age = mean(how_old_are_you))%>%
    select(average_age)
  
- This provided the average age of 38.9 years.   
+##  This provided the average age of 38.9 years for those who are NOT going trick or treating 
     
-Q3What was the average age of people who are ARE not going trick or treating?
+#  Q3What was the average age of people who are ARE going trick or treating?
 
 
 mega_data%>%
@@ -68,10 +67,10 @@ mega_data%>%
    mutate(average_age = mean(how_old_are_you, na.rm = TRUE))%>%
    select(average_age)
 
-This provided the answer "infinity" so R telling me that that calculation is not defined (somewhere in the data set there is a really long number)
-this is counting the NA as well
+#  This provided the answer "infinity" so R telling me that that calculation is not defined (somewhere in the data set there is a really long number)
+this is counting the NA as well.  Again if we had a drop down then this would not have happened.
 
-#So then needed to filter out the respondent who may have put in a very long number (2000)
+#  So then needed to filter out the respondent who may have put in a very long number (2000)
 
 treater_averageage <-mega_datanoinfinity%>%
   mutate(how_old_are_you = as.numeric(how_old_are_you))%>%
@@ -80,7 +79,7 @@ treater_averageage <-mega_datanoinfinity%>%
   mutate(average_age = mean(how_old_are_you, na.rm = TRUE))%>%
   select(average_age)
 
-This then gave me the average of 33.6
+This then gave me the average of 33.6 for those who are going trick or treating.
 
 
 Q4For each of joy, despair and meh, which candy bar received the most of these ratings?
