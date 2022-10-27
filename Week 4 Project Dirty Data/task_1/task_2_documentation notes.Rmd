@@ -9,6 +9,7 @@ output: html_notebook
 # Set up the project folders and collaborators included in the documentation
 # Downloaded the csv datafiles and input the data into the folder.
 # Took time to review the data and consider what the content of the data looked like and if there were errors or anomalise in the data.
+# In sumary the data was a table of decathlon scores (there are a number of competitions in a decathlon) and these scores were taken over the course of two competitions (Decaster and aOlympicG)  There was only one set of data so no requirment to join the data.
 # Revised the week 2 section on tidy data as the data is not in the right format of long data with all the values attributed the the columns and the variable for the data.
 #Read the questions as this is the essence of what i need to achieve and to focus my time on this.  As opposed to lots of code and wrangling that does not really answer the questions.
 

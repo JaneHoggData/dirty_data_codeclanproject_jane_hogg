@@ -1768,16 +1768,57 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-Notebook. When you execute code within the notebook, the results appear
-beneath the code.</p>
-<p>Analysis Questions</p>
-<p>Analysis 1.4.1 Q1.What is the total number of candy ratings given
-across the three years. (Number of candy ratings, not the number of
-raters. Don’t count missing values)</p>
-<p>Q2 What was the average age of people who are going out trick or
-treating? Q3What was the average age of people who are not going trick
-or treating?</p>
+<div id="candy-halloween-horror-hierachy" class="section level2">
+<h2>Candy Halloween Horror Hierachy</h2>
+<p>#Wrote the new clean data into a new folder. # Revised the joins
+function to consider what needed to answer key questions #Decided to
+complete a bind to create megadate and then answer the questions. #Need
+to clean again. Back again to the dataset and consider the cleaning
+#Cleaned the NA from the age column. But realised now that there are
+characted and numbers in the columns (providing a drop down menu of ages
+would have stopped rougu characted date appearing in this column)</p>
+<p>###Analysis Questions</p>
+<p>1.4.1 Q1.What is the total number of candy ratings given across the
+three years. (Number of candy ratings, not the number of raters. Don’t
+count missing values)</p>
+<p>#so this requires to count the number of ratings in each column mega
+data clear na sum for each column</p>
+<p>Q2 What was the average age of people who are NOT going out trick or
+treating? #split into two parts #all people who are answer yes to the
+trick and treat question #and then the mean of the age from this
+group</p>
+<p>A tibble: 1 × 1 mega_cleanb <dbl> 1 NA #Warning message: #In
+mean.default(how_old_are_you) : #argument is not numeric or logical:
+returning NA #But this had run and would allow me to turn the column to
+numeric and filtering the NA values</p>
+<p>Warning message: Problem while computing
+<code>how_old_are_you = as.numeric(how_old_are_you)</code>. ℹ NAs
+introduced by coercion</p>
+</div>
+<div id="then-selected-out-the-nos" class="section level1">
+<h1>then selected out the No’s</h1>
+<pre><code>    # mega_data%&gt;%</code></pre>
+<p>mutate(how_old_are_you = as.numeric(how_old_are_you))%&gt;%
+filter(q1_going_out == “No”)%&gt;% mutate(average_age =
+mean(how_old_are_you))%&gt;% select(average_age)</p>
+<p>This provided the average age of 38.9 years.</p>
+<p>Q3What was the average age of people who are ARE not going trick or
+treating?</p>
+<p>mega_data%&gt;% mutate(how_old_are_you =
+as.numeric(how_old_are_you))%&gt;% filter(q1_going_out == “Yes”)%&gt;%
+mutate(average_age = mean(how_old_are_you, na.rm = TRUE))%&gt;%
+select(average_age)</p>
+<p>This provided the answer “infinity” so R telling me that that
+calculation is not defined (somewhere in the data set there is a really
+long number) this is counting the NA as well</p>
+<p>#So then needed to filter out the respondent who may have put in a
+very long number (2000)</p>
+<p>treater_averageage &lt;-mega_datanoinfinity%&gt;%
+mutate(how_old_are_you = as.numeric(how_old_are_you))%&gt;%
+filter(q1_going_out == “Yes”)%&gt;% filter(how_old_are_you &lt;
+100)%&gt;% mutate(average_age = mean(how_old_are_you, na.rm =
+TRUE))%&gt;% select(average_age)</p>
+<p>This then gave me the average of 33.6</p>
 <p>Q4For each of joy, despair and meh, which candy bar received the most
 of these ratings?</p>
 <p>Q5How many people rated Starburst as despair? For the next three
@@ -1788,8 +1829,9 @@ gender in the dataset ?</p>
 <p>Q8What was the most popular candy bar by this rating for people in
 US, Canada, UK, and all other countries?</p>
 <!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KQW5hbHlzaXMgUXVlc3Rpb25zDQoNCkFuYWx5c2lzDQoxLjQuMQ0KUTEuV2hhdCBpcyB0aGUgdG90YWwgbnVtYmVyIG9mIGNhbmR5IHJhdGluZ3MgZ2l2ZW4gYWNyb3NzIHRoZSB0aHJlZSB5ZWFycy4NCihOdW1iZXIgb2YgY2FuZHkgcmF0aW5ncywgbm90IHRoZSBudW1iZXIgb2YgcmF0ZXJzLiBEb27igJl0IGNvdW50IG1pc3NpbmcgdmFsdWVzKQ0KDQpRMiBXaGF0IHdhcyB0aGUgYXZlcmFnZSBhZ2Ugb2YgcGVvcGxlIHdobyBhcmUgZ29pbmcgb3V0IHRyaWNrIG9yIHRyZWF0aW5nPw0KUTNXaGF0IHdhcyB0aGUgYXZlcmFnZSBhZ2Ugb2YgcGVvcGxlIHdobyBhcmUgbm90IGdvaW5nIHRyaWNrIG9yIHRyZWF0aW5nPw0KDQpRNEZvciBlYWNoIG9mIGpveSwgZGVzcGFpciBhbmQgbWVoLCB3aGljaCBjYW5keSBiYXIgcmVjZWl2ZWQgdGhlIG1vc3Qgb2YgdGhlc2UgcmF0aW5ncz8NCg0KUTVIb3cgbWFueSBwZW9wbGUgcmF0ZWQgU3RhcmJ1cnN0IGFzIGRlc3BhaXI/DQpGb3IgdGhlIG5leHQgdGhyZWUgcXVlc3Rpb25zLCBjb3VudCBkZXNwYWlyIGFzIC0xLCBqb3kgYXMgKzEsIGFuZCBtZWggYXMgMC4NCg0KUTZXaGF0IHdhcyB0aGUgbW9zdCBwb3B1bGFyIGNhbmR5IGJhciBieSB0aGlzIHJhdGluZyBzeXN0ZW0gZm9yIGVhY2ggZ2VuZGVyIGluIHRoZSBkYXRhc2V0ID8NCg0KUTdXaGF0IHdhcyB0aGUgbW9zdCBwb3B1bGFyIGNhbmR5IGJhciBpbiBlYWNoIHllYXI/DQoNClE4V2hhdCB3YXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBiYXIgYnkgdGhpcyByYXRpbmcgZm9yIHBlb3BsZSBpbiBVUywgQ2FuYWRhLCBVSywgYW5kIGFsbCBvdGhlciBjb3VudHJpZXM/</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KIA0KIyMgQ2FuZHkgSGFsbG93ZWVuIEhvcnJvciBIaWVyYWNoeQ0KDQojV3JvdGUgdGhlIG5ldyBjbGVhbiBkYXRhIGludG8gYSBuZXcgZm9sZGVyLg0KIyBSZXZpc2VkIHRoZSBqb2lucyBmdW5jdGlvbiB0byBjb25zaWRlciB3aGF0IG5lZWRlZCB0byBhbnN3ZXIga2V5IHF1ZXN0aW9ucw0KI0RlY2lkZWQgdG8gY29tcGxldGUgYSBiaW5kIHRvIGNyZWF0ZSBtZWdhZGF0ZSBhbmQgdGhlbiBhbnN3ZXIgdGhlIHF1ZXN0aW9ucy4NCiNOZWVkIHRvIGNsZWFuIGFnYWluLiBCYWNrIGFnYWluIHRvIHRoZSBkYXRhc2V0IGFuZCBjb25zaWRlciB0aGUgY2xlYW5pbmcNCiNDbGVhbmVkIHRoZSBOQSBmcm9tIHRoZSBhZ2UgY29sdW1uLiBCdXQgcmVhbGlzZWQgbm93IHRoYXQgdGhlcmUgYXJlIGNoYXJhY3RlZCBhbmQgbnVtYmVycyBpbiB0aGUgY29sdW1ucyAocHJvdmlkaW5nIGEgZHJvcCBkb3duIG1lbnUgb2YgYWdlcyB3b3VsZCBoYXZlIHN0b3BwZWQgcm91Z3UgY2hhcmFjdGVkIGRhdGUgYXBwZWFyaW5nIGluIHRoaXMgY29sdW1uKQ0KDQojIyNBbmFseXNpcyBRdWVzdGlvbnMNCg0KDQoNCg0KMS40LjENClExLldoYXQgaXMgdGhlIHRvdGFsIG51bWJlciBvZiBjYW5keSByYXRpbmdzIGdpdmVuIGFjcm9zcyB0aGUgdGhyZWUgeWVhcnMuDQooTnVtYmVyIG9mIGNhbmR5IHJhdGluZ3MsIG5vdCB0aGUgbnVtYmVyIG9mIHJhdGVycy4gRG9u4oCZdCBjb3VudCBtaXNzaW5nIHZhbHVlcykNCg0KI3NvIHRoaXMgcmVxdWlyZXMgdG8gY291bnQgdGhlIG51bWJlciBvZiByYXRpbmdzIGluIGVhY2ggY29sdW1uDQptZWdhIGRhdGENCmNsZWFyIG5hDQpzdW0gZm9yIGVhY2ggY29sdW1uDQoNCg0KUTIgV2hhdCB3YXMgdGhlIGF2ZXJhZ2UgYWdlIG9mIHBlb3BsZSB3aG8gYXJlIE5PVCBnb2luZyBvdXQgdHJpY2sgb3IgdHJlYXRpbmc/DQojc3BsaXQgaW50byB0d28gcGFydHMNCiNhbGwgcGVvcGxlIHdobyBhcmUgYW5zd2VyIHllcyB0byB0aGUgdHJpY2sgYW5kIHRyZWF0IHF1ZXN0aW9uDQojYW5kIHRoZW4gdGhlIG1lYW4gb2YgdGhlIGFnZSBmcm9tIHRoaXMgZ3JvdXANCg0KDQpBIHRpYmJsZTogMSDDlyAxDQogIG1lZ2FfY2xlYW5iDQogICAgICAgIDxkYmw+DQoxICAgICAgICAgIE5BDQojV2FybmluZyBtZXNzYWdlOg0KI0luIG1lYW4uZGVmYXVsdChob3dfb2xkX2FyZV95b3UpIDoNCiAgI2FyZ3VtZW50IGlzIG5vdCBudW1lcmljIG9yIGxvZ2ljYWw6IHJldHVybmluZyBOQQ0KI0J1dCB0aGlzIGhhZCBydW4gYW5kIHdvdWxkIGFsbG93IG1lIHRvIHR1cm4gdGhlIGNvbHVtbiB0byBudW1lcmljIGFuZCBmaWx0ZXJpbmcgdGhlIE5BIHZhbHVlcw0KICANCiAgDQpXYXJuaW5nIG1lc3NhZ2U6DQpQcm9ibGVtIHdoaWxlIGNvbXB1dGluZyBgaG93X29sZF9hcmVfeW91ID0gYXMubnVtZXJpYyhob3dfb2xkX2FyZV95b3UpYC4NCuKEuSBOQXMgaW50cm9kdWNlZCBieSBjb2VyY2lvbiANCg0KDQojIHRoZW4gc2VsZWN0ZWQgb3V0IHRoZSBObydzDQoNCg0KICAgIA0KICAgICAgICAjIG1lZ2FfZGF0YSU+JQ0KICAgbXV0YXRlKGhvd19vbGRfYXJlX3lvdSA9IGFzLm51bWVyaWMoaG93X29sZF9hcmVfeW91KSklPiUNCiAgICBmaWx0ZXIocTFfZ29pbmdfb3V0ID09ICJObyIpJT4lDQogICBtdXRhdGUoYXZlcmFnZV9hZ2UgPSBtZWFuKGhvd19vbGRfYXJlX3lvdSkpJT4lDQogICBzZWxlY3QoYXZlcmFnZV9hZ2UpDQogDQogVGhpcyBwcm92aWRlZCB0aGUgYXZlcmFnZSBhZ2Ugb2YgMzguOSB5ZWFycy4gICANCiAgICANClEzV2hhdCB3YXMgdGhlIGF2ZXJhZ2UgYWdlIG9mIHBlb3BsZSB3aG8gYXJlIEFSRSBub3QgZ29pbmcgdHJpY2sgb3IgdHJlYXRpbmc/DQoNCg0KbWVnYV9kYXRhJT4lDQogICBtdXRhdGUoaG93X29sZF9hcmVfeW91ID0gYXMubnVtZXJpYyhob3dfb2xkX2FyZV95b3UpKSU+JQ0KICAgZmlsdGVyKHExX2dvaW5nX291dCA9PSAiWWVzIiklPiUNCiAgIG11dGF0ZShhdmVyYWdlX2FnZSA9IG1lYW4oaG93X29sZF9hcmVfeW91LCBuYS5ybSA9IFRSVUUpKSU+JQ0KICAgc2VsZWN0KGF2ZXJhZ2VfYWdlKQ0KDQpUaGlzIHByb3ZpZGVkIHRoZSBhbnN3ZXIgImluZmluaXR5IiBzbyBSIHRlbGxpbmcgbWUgdGhhdCB0aGF0IGNhbGN1bGF0aW9uIGlzIG5vdCBkZWZpbmVkIChzb21ld2hlcmUgaW4gdGhlIGRhdGEgc2V0IHRoZXJlIGlzIGEgcmVhbGx5IGxvbmcgbnVtYmVyKQ0KdGhpcyBpcyBjb3VudGluZyB0aGUgTkEgYXMgd2VsbA0KDQojU28gdGhlbiBuZWVkZWQgdG8gZmlsdGVyIG91dCB0aGUgcmVzcG9uZGVudCB3aG8gbWF5IGhhdmUgcHV0IGluIGEgdmVyeSBsb25nIG51bWJlciAoMjAwMCkNCg0KdHJlYXRlcl9hdmVyYWdlYWdlIDwtbWVnYV9kYXRhbm9pbmZpbml0eSU+JQ0KICBtdXRhdGUoaG93X29sZF9hcmVfeW91ID0gYXMubnVtZXJpYyhob3dfb2xkX2FyZV95b3UpKSU+JQ0KICBmaWx0ZXIocTFfZ29pbmdfb3V0ID09ICJZZXMiKSU+JQ0KICBmaWx0ZXIoaG93X29sZF9hcmVfeW91IDwgMTAwKSU+JQ0KICBtdXRhdGUoYXZlcmFnZV9hZ2UgPSBtZWFuKGhvd19vbGRfYXJlX3lvdSwgbmEucm0gPSBUUlVFKSklPiUNCiAgc2VsZWN0KGF2ZXJhZ2VfYWdlKQ0KDQpUaGlzIHRoZW4gZ2F2ZSBtZSB0aGUgYXZlcmFnZSBvZiAzMy42DQoNCg0KUTRGb3IgZWFjaCBvZiBqb3ksIGRlc3BhaXIgYW5kIG1laCwgd2hpY2ggY2FuZHkgYmFyIHJlY2VpdmVkIHRoZSBtb3N0IG9mIHRoZXNlIHJhdGluZ3M/DQoNClE1SG93IG1hbnkgcGVvcGxlIHJhdGVkIFN0YXJidXJzdCBhcyBkZXNwYWlyPw0KRm9yIHRoZSBuZXh0IHRocmVlIHF1ZXN0aW9ucywgY291bnQgZGVzcGFpciBhcyAtMSwgam95IGFzICsxLCBhbmQgbWVoIGFzIDAuDQoNClE2V2hhdCB3YXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBiYXIgYnkgdGhpcyByYXRpbmcgc3lzdGVtIGZvciBlYWNoIGdlbmRlciBpbiB0aGUgZGF0YXNldCA/DQoNClE3V2hhdCB3YXMgdGhlIG1vc3QgcG9wdWxhciBjYW5keSBiYXIgaW4gZWFjaCB5ZWFyPw0KDQpROFdoYXQgd2FzIHRoZSBtb3N0IHBvcHVsYXIgY2FuZHkgYmFyIGJ5IHRoaXMgcmF0aW5nIGZvciBwZW9wbGUgaW4gVVMsIENhbmFkYSwgVUssIGFuZCBhbGwgb3RoZXIgY291bnRyaWVzPw==</div>
 
 
 

@@ -2,48 +2,49 @@
 title: "R Notebook"
 output: html_notebook
 ---
-Read the analysis questions first and also the visual plot of the data on the website.  This gave me some idea of the answers to some of the analysis questions before any deep dive. Buy lindt truffles to be top treating house.
-Read in the data - revised the read in notes and the important of Excel and extra package
-Review and look at the data deciding what i will really need to answer the questions
-Clean each dataset first rahter than all together. - no meta data contained in the files (data about data)
+
+##Task 4 - Candy Halloween Horror Hierachy
+
+#Background Comments
+
+#I decided to read the analysis questions first before even looking at the data. I also reviewed the visual plot of the data on the website so I could get a real sense of how others had used the data to provide helpful insights and a hierachy of candy based on the data.  Put simply what people liked, sort of liked and then disliked if there were Trick or Treater particpants or not.
+
+#The data consisted of three data sets from 2015 - 2017 with a considerable amount of challenges with most of the datasets in relation to the standarisation of the questions and also the relevance to the questions being needed to be asked. The data also provided insights in relatin to age,gender and the location of respondents.
+
+#It should be noted that in my opinion the 2017 dataset was so full of unrelated questions and no timestamp data that was comparable to the other data sets (so was it really 2017 data?)  I would be inclined, if the analysis was to be completed in a short timeframe, to omit it from the analysis in Q2.  
+
+#In addition the datasets of 2015-2016 provides a sample size in excess of 10,000 records. This is a significant number to consider the information statistically robust.
+
+#The inclusion of irrelavant questions in 2017 also illustrated the need to be prudent when asking questions. In relation to the age question more directive in the use of a drop down menu for age classification.
 
 
-Loaded in janitor (forgot to do that in task 1) but cleaned it for task 4 to make sure no capitals and spaces.
-Renamed the columns year/timestamp/trick and treat
-Notes for 2016 data clean
+This gave me some idea of the answers to some of the analysis questions before any deep dive. 
+--Buy Kit Kats, normal sized bars of chocolate and lindt truffles to be the top treating house in the neighbourhood.--
+
+##Reading in the Data
+
+#Read in the data - revised the read in notes and the importantance of Excel and extra packages to download,
+#Review and look at the data deciding what i will really need to answer the questions
+
+###Cleaning the Data
+
+#Cleaned each dataset first rather than all together. - no meta data contained in the files (data about data)
 
 
-Decided to not removed NA data as not required in order to answer the question.  But did add in extra columns for gender and NA. 
-Want to exclude gender and also state as not relevant to the questions we we are being asked
+#Loaded in janitor (forgot to do that in task 1) but cleaned it for task 4 to make sure no capitals and spaces.
+#Renamed the columns year/timestamp/trick and treat
+
+#Here I had to order my thoughts with pen and paper (see photo) which did help try to order the thoughs and get back on track with focus on the questions only.
 
 
-Made a total mess of the files and deleted 16/17 - so had to reset Github
-Joining the data - relationship is many to many
-New day sorted the going out questions and then did a sketch of what i needed to do with each column to organise.
-Clear missing values
+#Decided at this stage to not removed NA data on all the files as not required in order to answer the question.  But did add in extra columns for gender and NA. 
+
+#Exclude gender and also state (2016) as not relevant to the questions we  are being asked.  I 
 
 
-ratings for the candy
-Average age ToT and the average of those not - dead to check the NA
-Ranking of joy, meh and despair
-Data Cleaning
+#Made a total mess of the files and deleted 16/17 - so had to reset Github
 
+#New day sorted the going out questions and then did a sketch of what i needed to do with each column to organise.
+#Clear missing values.  
 
-Analysis
-1.4.1
-Q1.What is the total number of candy ratings given across the three years.
-(Number of candy ratings, not the number of raters. Don’t count missing values)
-
-Q2 What was the average age of people who are going out trick or treating?
-Q3What was the average age of people who are not going trick or treating?
-
-Q4For each of joy, despair and meh, which candy bar received the most of these ratings?
-
-Q5How many people rated Starburst as despair?
-For the next three questions, count despair as -1, joy as +1, and meh as 0.
-
-Q6What was the most popular candy bar by this rating system for each gender in the dataset ?
-
-Q7What was the most popular candy bar in each year?
-
-Q8What was the most popular candy bar by this rating for people in US, Canada, UK, and all other countries?
+#Concluded that i needed to move on to consider how to then join the data.  And revised the sections on joins, although decided that bidding was more relevant and helpfyl. 
